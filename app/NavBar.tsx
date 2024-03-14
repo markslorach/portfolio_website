@@ -5,10 +5,10 @@ import ThemeButton from "./components/ThemeButton";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between">
+    <nav className="container flex justify-between items-center m-auto max-w-6xl">
       <Link href="/">Home</Link>
       <ThemeButton />
-    </div>
+    </nav>
   );
 };
 
