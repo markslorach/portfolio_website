@@ -10,7 +10,7 @@ export default function Home() {
           .
         </h1>
         <p>
-          I'm a passionate software developer with a focus on creating elegant
+          I&apos;m a passionate software developer with a focus on creating elegant
           solutions. My expertise includes full-stack web development, cloud
           computing, and mobile app development. I love turning ideas into
           robust, user-friendly applications.
