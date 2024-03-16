@@ -6,7 +6,6 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -21,7 +20,7 @@ const MobileNav = () => {
           <Bars3Icon className="h-8 w-8 cursor-pointer" />
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="w-48 border-none shadow-sm dark:bg-slate-800"
+          className="w-48 border-none rounded-lg shadow-sm dark:bg-slate-800"
           align="end"
           forceMount
         >
@@ -34,7 +33,7 @@ const MobileNav = () => {
               >
                 <Link
                   href={link.href}
-                  className="text-[16px] font-normal text-black/50 dark:text-white/70"
+                  className="text-lg font-normal text-black/50 dark:text-white/70"
                 >
                   {`/${link.label}`}
                 </Link>
