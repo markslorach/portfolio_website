@@ -20,7 +20,7 @@ const MobileNav = () => {
           <Bars3Icon className="h-8 w-8 cursor-pointer" />
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="w-48 border-none rounded-lg shadow-sm dark:bg-slate-800"
+          className="w-48 rounded-lg border-none shadow-sm dark:bg-slate-800"
           align="end"
           forceMount
         >
@@ -29,14 +29,9 @@ const MobileNav = () => {
               <DropdownMenuItem
                 asChild
                 key={idx}
-                className="py-2 pl-3 dark:focus:bg-white/10"
+                className="py-2 pl-3 text-lg font-normal text-black/50 dark:text-white/70 dark:focus:bg-white/10"
               >
-                <Link
-                  href={link.href}
-                  className="text-lg font-normal text-black/50 dark:text-white/70"
-                >
-                  {`/${link.label}`}
-                </Link>
+                <Link href={link.href}>{`/${link.label}`}</Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuGroup>

@@ -21,7 +21,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="m-auto flex h-24 max-w-2xl items-center justify-between px-4">
+    <nav className="m-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
       <div className="flex items-center space-x-16">
         <Link href="/">
           <h1 className="text-xl font-bold tracking-wide text-blue-400">
