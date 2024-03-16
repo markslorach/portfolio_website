@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // Components
-import ThemeButton from "./components/ThemeButton";
+import ThemeButton from "../components/ThemeButton";
 import MobileNav from "./MobileNav";
 
 interface NavLinks {
@@ -30,7 +30,7 @@ const NavBar = () => {
           </h1>
         </Link>
 
-        <ul className="flex gap-4 font-semibold tracking-wide text-black/50 dark:text-white/70">
+        <ul className="flex gap-4 font-medium tracking-wide text-black/50 dark:text-white/70">
           {navLinks.map((link, idx) => (
             <li
               key={idx}
