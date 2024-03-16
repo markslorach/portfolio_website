@@ -19,19 +19,18 @@ const ThemeButton = () => {
 
   return (
     <>
-    
-    <button
-      aria-label="Toggle Theme"
-      type="button"
-      className="rounded-lg bg-slate-200 p-2"
-      onClick={toggleTheme}
-    >
-      {resolvedTheme === "dark" ? (
-        <SunIcon className="h-4 w-4 text-black/80" />
-      ) : (
-        <MoonIcon className="h-4 w-4 text-black/80" />
-      )}
-    </button>
+      <button
+        aria-label="Toggle Theme"
+        type="button"
+        className="rounded-lg bg-slate-200 p-2 dark:bg-white/10"
+        onClick={toggleTheme}
+      >
+        {resolvedTheme === "dark" ? (
+          <SunIcon className="h-5 w-5" />
+        ) : (
+          <MoonIcon className="h-5 w-5" />
+        )}
+      </button>
     </>
   );
 };
