@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <nav className="m-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
-      <div className="flex items-center space-x-16">
+      <div className="flex items-center space-x-12">
         <Link href="/">
           <h1 className="text-xl font-bold tracking-wide text-blue-400">
             mark
@@ -30,7 +30,7 @@ const NavBar = () => {
           </h1>
         </Link>
 
-        <ul className="flex gap-5 font-normal tracking-wide text-black/50 dark:text-white/70">
+        <ul className="flex gap-4 font-semibold tracking-wide text-black/50 dark:text-white/70">
           {navLinks.map((link, idx) => (
             <li
               key={idx}
