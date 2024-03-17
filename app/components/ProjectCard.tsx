@@ -45,7 +45,7 @@ const ProjectCard = () => {
     },
   ];
 
-  const cardStyles = `flex flex-col justify-end rounded-lg border border-slate-300 p-4 dark:border-white/30`;
+  const cardStyles = "flex flex-col justify-end rounded-lg border border-slate-300 p-4 dark:border-white/30";
 
   return (
     <section className="mb-20">

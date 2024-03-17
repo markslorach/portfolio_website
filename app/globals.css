@@ -7,7 +7,7 @@ body {
 }
 
 .heading-h1 {
-  @apply text-5xl font-extrabold leading-none text-black/80 dark:text-white/90;
+  @apply text-[42px] sm:text-5xl font-extrabold leading-none text-black/80 dark:text-white/90;
 }
 
 .heading-h2 {
