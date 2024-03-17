@@ -47,5 +47,15 @@ export default {
         },
       ],
     },
+    {
+      name: "tags",
+      type: "array",
+      title: "Tags",
+      of: [
+        {
+          type: "string",
+        },
+      ],
+    },
   ],
 };
