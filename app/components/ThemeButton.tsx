@@ -22,7 +22,7 @@ const ThemeButton = () => {
       <button
         aria-label="Toggle Theme"
         type="button"
-        className="rounded-lg p-2 transition-colors bg-slate-200 dark:bg-white/10"
+        className="rounded-lg bg-slate-200/60 p-2 transition-colors dark:bg-white/10"
         onClick={toggleTheme}
       >
         {resolvedTheme === "dark" ? (

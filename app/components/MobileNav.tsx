@@ -29,7 +29,7 @@ const MobileNav = () => {
               <DropdownMenuItem
                 asChild
                 key={idx}
-                className="py-2 pl-3 text-lg font-semibold tracking-wide text-black/50 dark:text-white/70 dark:focus:bg-white/10"
+                className="font-base py-2 pl-3 text-lg tracking-wide text-black/50 dark:text-white/70 dark:focus:bg-white/10"
               >
                 <Link href={link.href}>{`/${link.label}`}</Link>
               </DropdownMenuItem>
