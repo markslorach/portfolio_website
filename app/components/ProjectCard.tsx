@@ -21,7 +21,7 @@ const ProjectCard = () => {
     },
     {
       id: 3,
-      title: "Data Visualization Dashboard",
+      title: "Data Visualization",
       slug: "data-visualization-dashboard",
       tags: ["JavaScript", "D3.js", "React"],
       summary:
@@ -45,7 +45,8 @@ const ProjectCard = () => {
     },
   ];
 
-  const cardStyles = "flex flex-col justify-end rounded-lg border border-slate-300 p-4 dark:border-white/30";
+  const cardStyles =
+    "";
 
   return (
     <section className="mb-20">
@@ -54,7 +55,7 @@ const ProjectCard = () => {
           .map((project, idx) => (
             <div
               key={idx}
-              className={`${cardStyles} ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
+              className={`projectCard  ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
             >
               <h2 className="mb-2 flex items-center font-semibold leading-none">
                 {project.title} <ArrowUpRightIcon className="ml-2 h-4 w-4" />
