@@ -1,12 +1,22 @@
 import { Suspense } from "react";
+import Link from "next/link";
 
 // Components
 import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import BlogCard from "../components/BlogCard";
-import Link from "next/link";
+import { client } from "@/sanity/lib/client";
 
-export default function Home() {
+async function getData() {
+  const query = `*[_type == "projects"] | order(_createdAt desc) {title, description, githubUrl}`;
+  const data = await client.fetch(query);
+  return data;
+}
+
+export default async function Home() {
+  const projects = await getData();
+  // console.log(projects);
+
   return (
     <main>
       <Hero />
@@ -20,7 +30,7 @@ export default function Home() {
         </Link>
       </div>
       <Suspense fallback={<p>Add skeleton here</p>}>
-        <ProjectCard />
+        <ProjectCard project={projects} />
       </Suspense>
       <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Latest Posts</h2>
