@@ -1,6 +1,6 @@
 const BlogPage = () => {
   return (
-    <div>BlogPage</div>
+    <h1 className="heading-h2 mb-8">Blog</h1>
   )
 }
 

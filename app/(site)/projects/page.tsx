@@ -1,6 +1,6 @@
 const ProjectsPage = () => {
   return (
-    <div>ProjectsPage</div>
+    <h1 className="heading-h2 mb-8">Projects</h1>
   )
 }
 

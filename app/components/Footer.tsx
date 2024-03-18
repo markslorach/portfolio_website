@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <small className="text-black/40">
-        Built using Next.js, Typescript, Tailwind, Shadcn/ui and Sanity.io
+        Built using Next.js, Typescript, Tailwind, Shadcn/ui and Sanity.
       </small>
     </div>
   );
