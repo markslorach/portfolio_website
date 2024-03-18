@@ -10,18 +10,28 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="flex justify-between mb-8">
+      <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Recent Projects</h2>
-        <Link className="text-black/70 flex-col justify-end font-medium underline decoration-blue-400 decoration-2 underline-offset-2 hidden sm:inline-flex" href="/projects">View projects</Link>
+        <Link
+          className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
+          href="/projects"
+        >
+          View projects
+        </Link>
       </div>
       <Suspense fallback={<p>Add skeleton here</p>}>
         <ProjectCard />
       </Suspense>
-      <div className="flex justify-between mb-8">
+      <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Latest Posts</h2>
-        <Link className="text-black/70 flex-col justify-end font-medium underline decoration-blue-400 decoration-2 underline-offset-2 hidden sm:inline-flex" href="/projects">View posts</Link>
+        <Link
+          className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
+          href="/blog"
+        >
+          View posts
+        </Link>
       </div>
-        <BlogCard />
+      <BlogCard />
     </main>
   );
 }

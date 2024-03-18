@@ -25,8 +25,8 @@ const Hero = () => {
       <div className="flex flex-col space-y-8">
         <h1 className="heading-h1">
           Hello, I&apos;m{" "}
-          <span className="underline decoration-blue-400 decoration-[6px] underline-offset-4">
-            <Link href='/about'>Mark</Link>
+          <span>
+            <Link className="underline decoration-blue-400 decoration-[6px] underline-offset-4" href='/about'>Mark</Link>
           </span>
           .
         </h1>
