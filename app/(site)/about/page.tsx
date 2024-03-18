@@ -16,7 +16,7 @@ const AboutPage = async () => {
 
   return (
     <div>
-      <h1 className="heading-h2 mb-8"><span className="underline decoration-blue-400 decoration-[4px] underline-offset-4">About</span>.</h1>
+      <h1 className="heading-h2 mb-8"><span className="underline decoration-blue-400 decoration-[5px] underline-offset-4">About</span>.</h1>
       <article className="mb-24">
         {data.map((data: any, idx: any) => (
           <div key={data} className="prose dark:prose-invert">
