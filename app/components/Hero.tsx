@@ -4,9 +4,9 @@ import Link from "next/link";
 // Icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
-const socialLinks = [
-  { icon: FaGithub, href: "https://github.com/markslorach" },
+export const socialLinks = [
   { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/markslorach/" },
+  { icon: FaGithub, href: "https://github.com/markslorach" },
 ];
 
 const Hero = () => {

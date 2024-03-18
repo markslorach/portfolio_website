@@ -15,6 +15,7 @@ export const navLinks: NavLinks[] = [
   { label: "about", href: "/about" },
   { label: "projects", href: "/projects" },
   { label: "blog", href: "/blog" },
+  { label: "contact", href: "/contact" },
 ];
 
 const NavBar = () => {
@@ -30,7 +31,7 @@ const NavBar = () => {
           </h1>
         </Link>
 
-        <ul className="font-base flex gap-4 tracking-wide text-black/50 dark:text-white/70">
+        <ul className="flex gap-4 tracking-wide text-black/50 dark:text-white/70">
           {navLinks.map((link, idx) => (
             <li
               key={idx}
