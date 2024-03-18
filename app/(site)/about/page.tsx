@@ -1,30 +1,48 @@
 import { client } from "@/sanity/lib/client";
 import { PortableText } from "@portabletext/react";
+// import Image from "next/image";
 
-async function getData() {
+interface AboutData {
+  title: string;
+  content: any;
+}
+
+async function getData(): Promise<AboutData[]> {
   const query = `*[_type == "about"]{title, content}`;
-
   const data = await client.fetch(query);
   return data;
 }
 
-export const revalidate = 0
-
 const AboutPage = async () => {
-  const data = await getData();
-  console.log(data);
+  const about = await getData();
 
   return (
-    <div>
-      <h1 className="heading-h2 mb-8"><span className="underline decoration-blue-400 decoration-[5px] underline-offset-4">About</span>.</h1>
+    <section>
+      <h1 className="heading-h2 mb-8">
+        <span className="underline decoration-blue-400 decoration-[5px] underline-offset-4">
+          About
+        </span>
+        .
+      </h1>
+      {/* <Image
+        className="mb-8 rounded-lg"
+        width={672}
+        height={290}
+        priority
+        alt="Glencoe"
+        src="/images/Glencoe.jpeg"
+      ></Image> */}
       <article className="mb-24">
-        {data.map((data: any, idx: any) => (
-          <div key={data} className="prose dark:prose-invert">
+        {about.map((data, idx) => (
+          <div
+            key={idx}
+            className="prose dark:prose-invert leading-relaxed tracking-[0.015rem]"
+          >
             <PortableText value={data.content} />
           </div>
         ))}
       </article>
-    </div>
+    </section>
   );
 };
 
