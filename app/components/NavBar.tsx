@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 // Components
 import ThemeButton from "./ThemeButton";
-import MobileNav from "./MobileNav";
+import MobileNav from "./MobileMenu";
 
 interface NavLinks {
   label: string;

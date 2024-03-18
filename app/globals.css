@@ -15,5 +15,5 @@ body {
 }
 
 .projectCard {
-  @apply flex flex-col justify-end rounded-lg border border-slate-300 p-4 transition-transform duration-500 hover:translate-y-[-3.5px] dark:border-white/30;
+  @apply flex flex-col justify-end rounded-lg border border-slate-300 p-4 transition-transform duration-500 sm:hover:translate-y-[-3.5px] dark:border-white/30;
 }

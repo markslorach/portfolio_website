@@ -12,7 +12,7 @@ import {
 // Icons
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
-const MobileNav = () => {
+const MobileMenu = () => {
   return (
     <div className="sm:hidden">
       <DropdownMenu>
@@ -41,4 +41,4 @@ const MobileNav = () => {
   );
 };
 
-export default MobileNav;
+export default MobileMenu;

@@ -6,13 +6,13 @@ import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 const ThemeButton = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   const toggleTheme = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   if (!mounted) return null;
@@ -25,7 +25,7 @@ const ThemeButton = () => {
         className="rounded-lg bg-slate-200/60 p-2 transition-colors dark:bg-white/10"
         onClick={toggleTheme}
       >
-        {resolvedTheme === "dark" ? (
+        {theme === "dark" ? (
           <SunIcon className="h-5 w-5" />
         ) : (
           <MoonIcon className="h-5 w-5" />

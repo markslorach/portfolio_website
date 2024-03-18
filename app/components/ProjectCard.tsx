@@ -57,7 +57,7 @@ const ProjectCard = () => {
               key={idx}
               className={`projectCard  ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
             >
-              <h2 className="mb-2 flex items-center font-semibold leading-none">
+              <h2 className="mb-2 flex item-center font-semibold leading-none">
                 {project.title} <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </h2>
               <small className="line-clamp-2 text-black/50">
