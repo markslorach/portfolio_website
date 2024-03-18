@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
 
 const ProjectCard = ({ project }: any) => {
   return (

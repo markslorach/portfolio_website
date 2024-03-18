@@ -42,10 +42,12 @@ const BlogCard = () => {
       <div className="flex flex-col space-y-3">
         {blogPosts.map((post, idx) => (
           <article key={idx} className="projectCard">
-            <h2 className="item-center mb-2 flex font-semibold leading-none">
-              {post.title}
+            <div className="mb-2 flex items-center">
+              <h2 className="leading-1 line-clamp-1 font-semibold">
+                {post.title}
+              </h2>
               <ArrowUpRightIcon className="ml-2 h-4 w-4" />
-            </h2>
+            </div>
             <small className="leading-1 line-clamp-1 text-black/50">
               {post.summary}
             </small>
