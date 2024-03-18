@@ -7,7 +7,7 @@ const ProjectCard = ({ project }: any) => {
     <section className="mb-20">
       <div className="grid h-[800px] grid-cols-1 gap-3 sm:h-[400px] sm:grid-cols-11">
         {project
-          .map((project, idx) => (
+          .map((project:any, idx:any) => (
             <Link
               key={idx}
               href={project.githubUrl}
