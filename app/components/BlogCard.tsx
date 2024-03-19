@@ -1,5 +1,9 @@
+"use client";
+
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const blogPosts = [
   {
@@ -42,15 +46,22 @@ const BlogCard = () => {
       <div className="flex flex-col space-y-3">
         {blogPosts.map((post, idx) => (
           <article key={idx} className="projectCard">
-            <div className="mb-2 flex items-center">
-              <h2 className="leading-1 line-clamp-1 font-semibold">
-                {post.title}
-              </h2>
-              <ArrowUpRightIcon className="ml-2 h-4 w-4" />
-            </div>
-            <small className="leading-1 line-clamp-1 text-black/50">
-              {post.summary}
-            </small>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            >
+              <div className="mb-2 flex items-center">
+                <h2 className="leading-1 line-clamp-1 font-semibold">
+                  {post.title}
+                </h2>
+                <ArrowUpRightIcon className="ml-2 h-4 w-4" />
+              </div>
+              <small className="leading-1 line-clamp-1 text-black/50">
+                {post.summary}
+              </small>
+            </motion.div>
           </article>
         ))}
       </div>
