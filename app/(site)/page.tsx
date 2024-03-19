@@ -3,19 +3,26 @@ import Link from "next/link";
 
 // Components
 import Hero from "../components/Hero";
-import ProjectCard from "../components/ProjectCard";
-import BlogCard from "../components/BlogCard";
 import { client } from "@/sanity/lib/client";
+import HomeProjectList from "../components/HomeProjectList";
+import HomeBlogList from "../components/HomeBlogList";
 
-async function getData() {
-  const query = `*[_type == "projects"] | order(_createdAt desc) {title, description, githubUrl}`;
+async function getProjects() {
+  const query = `*[_type == "projects"] | order(_createdAt desc) {title, description, githubUrl, slug}`;
+  const data = await client.fetch(query);
+  return data;
+}
+
+async function getBlogs() {
+  const query = `*[_type == "blog"] | order(_createdAt desc) {title, description, slug}`;
   const data = await client.fetch(query);
   return data;
 }
 
 export default async function Home() {
-  const projects = await getData();
-  // console.log(projects);
+  const projects = await getProjects();
+  const blogs = await getBlogs();
+  console.log(blogs);
 
   return (
     <main>
@@ -30,7 +37,7 @@ export default async function Home() {
         </Link>
       </div>
       <Suspense fallback={<p>Add skeleton here</p>}>
-        <ProjectCard project={projects} />
+        <HomeProjectList project={projects} />
       </Suspense>
       <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Latest Posts</h2>
@@ -41,7 +48,7 @@ export default async function Home() {
           View posts
         </Link>
       </div>
-      <BlogCard />
+      <HomeBlogList blogs={blogs} />
     </main>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
-import { motion } from "framer-motion"; // Import Framer Motion
 
 const blogPosts = [
   {
@@ -40,18 +41,20 @@ const blogPosts = [
   },
 ];
 
-const BlogCard = () => {
+const HomeBlogList = ({blogs}: any) => {
+  const animateCard = {
+    initial: { opacity: 0, y: 15 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.5, delay: 0.1, ease: "easeOut" },
+  };
+
   return (
     <section className="mb-28">
       <div className="flex flex-col space-y-3">
-        {blogPosts.map((post, idx) => (
-          <article key={idx} className="projectCard">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            >
+        {blogs.map((post: any, idx: any) => (
+          <Link href='/' key={idx} className="projectCard">
+            <motion.div {...animateCard}>
               <div className="mb-2 flex items-center">
                 <h2 className="leading-1 line-clamp-1 font-semibold">
                   {post.title}
@@ -59,14 +62,14 @@ const BlogCard = () => {
                 <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </div>
               <small className="leading-1 line-clamp-1 text-black/50">
-                {post.summary}
+                {post.description}
               </small>
             </motion.div>
-          </article>
-        ))}
+          </Link>
+        )).slice(0, 4)}
       </div>
     </section>
   );
 };
 
-export default BlogCard;
+export default HomeBlogList;
