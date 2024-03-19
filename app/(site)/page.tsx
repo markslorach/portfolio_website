@@ -14,7 +14,7 @@ async function getProjects() {
 }
 
 async function getBlogs() {
-  const query = `*[_type == "blog"] | order(_createdAt desc) {title, description, slug}`;
+  const query = `*[_type == "blog"] | order(_createdAt desc) {title, description, slug, createdAt}`;
   const data = await client.fetch(query);
   return data;
 }
