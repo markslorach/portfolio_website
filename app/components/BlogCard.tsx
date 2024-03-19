@@ -38,7 +38,7 @@ const blogPosts = [
 
 const BlogCard = () => {
   return (
-    <section className="mb-24">
+    <section className="mb-28">
       <div className="flex flex-col space-y-3">
         {blogPosts.map((post, idx) => (
           <article key={idx} className="projectCard">
