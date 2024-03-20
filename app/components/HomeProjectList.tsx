@@ -32,7 +32,7 @@ const HomeProjectList = ({ project }: any) => {
               </small>
             </motion.div>
           </Link>
-        )).slice(0, 4)}
+        ))}
       </div>
     </section>
   );

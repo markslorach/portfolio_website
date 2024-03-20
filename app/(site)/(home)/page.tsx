@@ -27,7 +27,7 @@ export default async function Home() {
         </Link>
       </div>
 
-      <HomeProjectList project={projects} />
+      <HomeProjectList project={projects.slice(0, 4)} />
 
       <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Latest Posts</h2>
@@ -39,7 +39,7 @@ export default async function Home() {
         </Link>
       </div>
 
-      <HomeBlogList blogs={blogs} />
+      <HomeBlogList blogs={blogs.slice(0, 4)} />
     </main>
   );
 }
