@@ -20,7 +20,7 @@ const MobileMenu = () => {
           <Bars3Icon className="h-8 w-8 cursor-pointer" />
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="w-48 rounded-lg border-none shadow-sm dark:bg-slate-800"
+          className="w-44 rounded-lg border-none shadow-sm dark:bg-slate-800"
           align="end"
           forceMount
         >
@@ -31,7 +31,7 @@ const MobileMenu = () => {
                 key={idx}
                 className="font-base py-2 pl-3 text-lg tracking-wide text-black/50 dark:text-white/70 dark:focus:bg-white/10"
               >
-                <Link href={link.href}>{`/${link.label}`}</Link>
+                <Link href={link.href}>{`${link.label}`}</Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuGroup>

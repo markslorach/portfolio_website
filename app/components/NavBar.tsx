@@ -41,7 +41,7 @@ const NavBar = () => {
                 className="hidden text-base transition-colors hover:text-blue-400 sm:inline-flex"
                 href={link.href}
               >
-                {`/${link.label}`}
+                {`${link.label}`}
               </Link>
             </li>
           ))}
