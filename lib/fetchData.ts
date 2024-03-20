@@ -21,3 +21,27 @@ export async function getAboutInfo() {
   const data = await client.fetch(query);
   return data;
 }
+
+// Get blog by slug
+export async function getBlogBySlug(slug: any) {
+  const query = groq`
+    *[_type == "blog" && slug.current == '${slug}']{
+        "currentSlug": slug.current,
+        title,
+      }[0]
+  `;
+  const data = await client.fetch(query);
+  return data;
+}
+
+// Get project by slug
+export async function getProjectBySlug(slug: any) {
+  const query = groq`
+    *[_type == "projects" && slug.current == '${slug}']{
+        "currentSlug": slug.current,
+        title,
+      }[0]
+  `;
+  const data = await client.fetch(query);
+  return data;
+}
