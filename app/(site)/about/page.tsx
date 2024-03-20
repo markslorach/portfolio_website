@@ -1,22 +1,11 @@
-import { client } from "@/sanity/lib/client";
+import { getAboutInfo } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
 // import Image from "next/image";
-
-interface AboutData {
-  title: string;
-  content: any;
-}
-
-async function getData(): Promise<AboutData[]> {
-  const query = `*[_type == "about"]{title, content}`;
-  const data = await client.fetch(query);
-  return data;
-}
 
 export const revalidate = 0 // remove once website is complete
 
 const AboutPage = async () => {
-  const about = await getData();
+  const about = await getAboutInfo();
 
   return (
     <section>
@@ -35,7 +24,7 @@ const AboutPage = async () => {
         src="/images/Glencoe.jpeg"
       ></Image> */}
       <article className="mb-24">
-        {about.map((data, idx) => (
+        {about.map((data:any, idx: any) => (
           <div
             key={idx}
             className="prose dark:prose-invert min-w-full leading-relaxed tracking-[0.015rem]"

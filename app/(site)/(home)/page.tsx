@@ -1,23 +1,12 @@
+import { getBlogs, getProjects } from "@/lib/fetchData";
 import { Suspense } from "react";
 import Link from "next/link";
 
 // Components
 import Hero from "../../components/Hero";
-import { client } from "@/sanity/lib/client";
 import HomeProjectList from "../../components/HomeProjectList";
 import HomeBlogList from "../../components/HomeBlogList";
 
-async function getProjects() {
-  const query = `*[_type == "projects"] | order(_createdAt desc) {title, description, githubUrl, slug}`;
-  const data = await client.fetch(query);
-  return data;
-}
-
-async function getBlogs() {
-  const query = `*[_type == "blog"] | order(_createdAt desc) {title, description, slug, createdAt}`;
-  const data = await client.fetch(query);
-  return data;
-}
 
 export default async function Home() {
   const projects = await getProjects();
