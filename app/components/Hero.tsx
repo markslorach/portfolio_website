@@ -30,7 +30,7 @@ const Hero = () => {
           </span>
           .
         </h1>
-        <p className="prose line-clamp-3 leading-relaxed tracking-[0.015rem] text-black/70 dark:text-white/70">
+        <p className="line-clamp-3 leading-relaxed tracking-[0.015rem] text-black/70 dark:text-white/70 w-full">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
           lectus nisi. Sed sit amet tincidunt purus. Fusce molestie dui
           ullamcorper nulla facilisis ornare. In in facilisis lorem. Vivamus

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { formatDate } from "../utils/helpers";
 
 const HomeBlogList = ({ blogs }: any) => {
   const animateCard = {
@@ -18,10 +19,11 @@ const HomeBlogList = ({ blogs }: any) => {
       <div className="flex flex-col space-y-3">
         {blogs
           .map((post: any, idx: any) => {
-            const formattedDate = post.createdAt.split("-").reverse().join("-");
+
+            const formattedDate = formatDate(post.createdAt);
 
             return (
-              <Link href="/" key={idx} className="projectCard">
+              <Link href={`/blog/${post.slug.current}`} key={idx} className="projectCard">
                 <motion.div {...animateCard}>
                   <div className="flex items-center justify-between">
                     <div className="mb-2 flex items-center">

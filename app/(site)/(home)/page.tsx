@@ -2,10 +2,10 @@ import { Suspense } from "react";
 import Link from "next/link";
 
 // Components
-import Hero from "../components/Hero";
+import Hero from "../../components/Hero";
 import { client } from "@/sanity/lib/client";
-import HomeProjectList from "../components/HomeProjectList";
-import HomeBlogList from "../components/HomeBlogList";
+import HomeProjectList from "../../components/HomeProjectList";
+import HomeBlogList from "../../components/HomeBlogList";
 
 async function getProjects() {
   const query = `*[_type == "projects"] | order(_createdAt desc) {title, description, githubUrl, slug}`;

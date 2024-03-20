@@ -13,6 +13,8 @@ async function getData(): Promise<AboutData[]> {
   return data;
 }
 
+export const revalidate = 0 // remove once website is complete
+
 const AboutPage = async () => {
   const about = await getData();
 
@@ -36,7 +38,7 @@ const AboutPage = async () => {
         {about.map((data, idx) => (
           <div
             key={idx}
-            className="prose dark:prose-invert leading-relaxed tracking-[0.015rem]"
+            className="prose dark:prose-invert min-w-full leading-relaxed tracking-[0.015rem]"
           >
             <PortableText value={data.content} />
           </div>
