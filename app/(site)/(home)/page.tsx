@@ -1,5 +1,4 @@
 import { getBlogs, getProjects } from "@/lib/fetchData";
-import { Suspense } from "react";
 import Link from "next/link";
 
 // Components
@@ -7,15 +6,17 @@ import Hero from "../../components/Hero";
 import HomeProjectList from "../../components/HomeProjectList";
 import HomeBlogList from "../../components/HomeBlogList";
 
+export const revalidate = 0;
 
 export default async function Home() {
   const projects = await getProjects();
   const blogs = await getBlogs();
-  console.log(blogs);
+  // console.log(blogs);
 
   return (
     <main>
       <Hero />
+
       <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Recent Projects</h2>
         <Link
@@ -25,9 +26,9 @@ export default async function Home() {
           View projects
         </Link>
       </div>
-      <Suspense fallback={<p>Add skeleton here</p>}>
-        <HomeProjectList project={projects} />
-      </Suspense>
+
+      <HomeProjectList project={projects} />
+
       <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Latest Posts</h2>
         <Link
@@ -37,6 +38,7 @@ export default async function Home() {
           View posts
         </Link>
       </div>
+
       <HomeBlogList blogs={blogs} />
     </main>
   );

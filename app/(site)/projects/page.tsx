@@ -1,6 +1,10 @@
+import { getProjects } from "@/lib/fetchData";
 import ProjectList from "./ProjectList";
 
-const ProjectsPage = () => {
+const ProjectsPage = async () => {
+
+  const projects = await getProjects()
+
   return (
     <>
       <h1 className="heading-h2 mb-8">
@@ -9,7 +13,7 @@ const ProjectsPage = () => {
         </span>
         .
       </h1>
-      <ProjectList />
+      <ProjectList projects={projects}/>
     </>
   );
 };

@@ -1,5 +1,9 @@
 import { getBlogs } from "@/lib/fetchData";
+
+// Components
 import BlogList from "./BlogList";
+
+export const revalidate = 0;
 
 const BlogPage = async () => {
 

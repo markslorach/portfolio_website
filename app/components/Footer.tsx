@@ -26,10 +26,15 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <small className="text-black/40">
-        Built with <strong>Next.js</strong>, <strong>Tailwind</strong>,{" "}
-        <strong>Typescript</strong>, and <strong>Sanity.io</strong>.
-      </small>
+      <div>
+  <small className="text-black/40">
+    Built with{' '} 
+    <Link href="https://nextjs.org/" target="_blank" className="font-bold">Next.js</Link>,{' '} 
+    <Link href="https://tailwindcss.com/" target="_blank" className="font-bold">Tailwind</Link>,{' '} 
+    <Link href="https://www.typescriptlang.org/" target="_blank" className="font-bold">Typescript</Link>, and{' '} 
+    <Link href="https://www.sanity.io/" target="_blank" className="font-bold">Sanity.io</Link>.
+  </small>
+</div>
     </div>
   );
 };
