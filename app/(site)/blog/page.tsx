@@ -1,6 +1,10 @@
+import { getBlogs } from "@/lib/fetchData";
 import BlogList from "./BlogList";
 
-const BlogPage = () => {
+const BlogPage = async () => {
+
+  const blogs = await getBlogs();
+
   return (
     <>
       <h1 className="heading-h2 mb-8">
@@ -9,7 +13,7 @@ const BlogPage = () => {
         </span>
         .
       </h1>
-      <BlogList />
+      <BlogList blogs={blogs} />
     </>
   );
 };
