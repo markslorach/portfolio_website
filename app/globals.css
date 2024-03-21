@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-100 dark:bg-slate-900 overflow-scroll;
+  @apply overflow-scroll bg-neutral-100 dark:bg-slate-900;
+  /* transition: background-color 0.3s ease-in-out; */
+}
+
+.hero-heading {
+  @apply text-[42px] font-extrabold leading-none text-black/80 dark:text-white/90 sm:text-6xl
 }
 
 .heading-h1 {
@@ -11,9 +16,9 @@ body {
 }
 
 .heading-h2 {
-  @apply text-3xl font-extrabold text-black/80 dark:text-white/90 leading-none;
+  @apply text-3xl font-extrabold leading-none text-black/80 dark:text-white/90;
 }
 
 .projectCard {
-  @apply flex flex-col justify-end rounded-lg border border-slate-300 p-4 transition-transform duration-500 sm:hover:translate-y-[-3.5px] dark:border-white/30;
+  @apply flex flex-col justify-end rounded-lg border border-slate-300 p-4 transition-transform duration-500 dark:border-white/30 sm:hover:translate-y-[-3.5px];
 }

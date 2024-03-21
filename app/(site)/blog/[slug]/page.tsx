@@ -34,7 +34,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back to posts
         </Link>
-        <h1 className="heading-h1 text-wrap">{post.title}</h1>
+        <h1 className="hero-heading text-wrap">{post.title}</h1>
         <small className="flex items-center leading-none text-black/50">
           <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
           {formatDate(post.createdAt)}

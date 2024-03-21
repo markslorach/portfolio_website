@@ -24,7 +24,7 @@ const Hero = () => {
         />
       </figure>
       <div className="flex flex-col space-y-8">
-        <h1 className="heading-h1">
+        <h1 className="hero-heading">
           Hello, I&apos;m{" "}
           <span>
             <Link
