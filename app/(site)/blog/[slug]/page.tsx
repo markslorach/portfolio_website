@@ -34,7 +34,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         <Link href="/blog">
           <small className="flex items-center leading-none text-black/50 underline decoration-blue-400 decoration-2 underline-offset-2">
             <ArrowLeftIcon className="mr-1 h-4 w-4" />
-            Back to Blog
+            Back to posts
           </small>
         </Link>
         <h1 className="heading-h1 text-wrap">{post.title}</h1>

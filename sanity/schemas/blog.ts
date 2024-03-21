@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "blog",
   type: "document",
@@ -7,6 +9,7 @@ export default {
       name: "title",
       type: "string",
       title: "Blog Post Title",
+      validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
       name: "slug",
@@ -15,11 +18,13 @@ export default {
       options: {
         source: "title",
       },
+      validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
       name: "createdAt",
       type: "date",
       title: "Created At",
+      initialValue: () => new Date().toISOString(),
       options: {
         dateFormat: "DD-MM-YYYY",
       },
@@ -33,6 +38,7 @@ export default {
       name: "description",
       type: "string",
       title: "Small Description",
+      validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
       name: "content",
@@ -44,6 +50,7 @@ export default {
         },
         {
           type: "image",
+          fields: [{ type: "text", name: "alt", title: "Alt" }],
         },
       ],
     },
@@ -53,7 +60,8 @@ export default {
       title: "Tags",
       of: [
         {
-          type: "string",
+          type: 'reference',
+          to: [{type: 'tag'}]
         },
       ],
     },
