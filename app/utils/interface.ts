@@ -1,15 +1,18 @@
-export interface Projects {
+export interface Project {
   title: string;
   description: string;
   githubUrl: string;
   slug: { current: string };
+  content: any
   _id: string;
 }
 
-export interface BlogPosts {
+export interface BlogPost {
   title: string;
   description: string;
+  titleImage: any
   slug: { current: string };
   createdAt: string;
+  content: any
   _id: string;
 }

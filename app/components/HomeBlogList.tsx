@@ -3,14 +3,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 //Interface
-import { BlogPosts } from "../utils/interface";
+import { BlogPost } from "../utils/interface";
 
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { formatDate } from "../utils/helpers";
 
-
-const HomeBlogList = ({ blogs }: {blogs: BlogPosts[]}) => {
+const HomeBlogList = ({ blogs }: { blogs: BlogPost[] }) => {
   const animateCard = {
     initial: { opacity: 0, y: 15 },
     whileInView: { opacity: 1, y: 0 },

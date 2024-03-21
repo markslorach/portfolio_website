@@ -1,5 +1,5 @@
-import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
+import { urlForImage } from "@/sanity/lib/image";
 
 export const PortableTextComponent = {
   types: {
@@ -9,8 +9,9 @@ export const PortableTextComponent = {
         alt="Post image"
         width={800}
         height={280}
+        quality={75}
         priority
-        className="rounded-sm px-0 sm:px-8"
+        className="rounded-sm px-0 sm:px-5"
       />
     ),
   },

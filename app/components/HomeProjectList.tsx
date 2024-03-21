@@ -2,11 +2,13 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+// Interface
+import { Project } from "../utils/interface";
+
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import { Projects } from "../utils/interface";
 
-const HomeProjectList = ({ project }: {project: Projects[]}) => {
+const HomeProjectList = ({ project }: {project: Project[]}) => {
   const animateCard = {
     initial: { opacity: 0, y: 15 },
     whileInView: { opacity: 1, y: 0 },

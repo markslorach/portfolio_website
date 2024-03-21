@@ -10,6 +10,7 @@ import { PortableTextComponent } from "@/app/components/PortableTextComponent";
 
 // Icons
 import { CalendarDaysIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { BlogPost } from "@/app/utils/interface";
 
 interface Props {
   params: {
@@ -17,18 +18,10 @@ interface Props {
   };
 }
 
-interface BlogPostArticle {
-  title: string;
-  createdAt: string;
-  titleImage: any;
-  content: any;
-  tags: string[];
-}
-
 export const revalidate = 0;
 
 const BlogPage = async ({ params: { slug } }: Props) => {
-  const post: BlogPostArticle = await getBlogBySlug(slug);
+  const post: BlogPost = await getBlogBySlug(slug);
   console.log(post);
 
   return (

@@ -2,7 +2,7 @@ import { getBlogs, getProjects } from "@/lib/fetchData";
 import Link from "next/link";
 
 // Interface
-import { BlogPosts, Projects } from "@/app/utils/interface";
+import { BlogPost, Project } from "@/app/utils/interface";
 
 // Components
 import Hero from "../../components/Hero";
@@ -12,8 +12,8 @@ import HomeBlogList from "../../components/HomeBlogList";
 export const revalidate = 0;
 
 export default async function Home() {
-  const projects: Projects[] = await getProjects();
-  const blogs: BlogPosts[] = await getBlogs();
+  const projects: Project[] = await getProjects();
+  const blogs: BlogPost[] = await getBlogs();
 
   return (
     <main>
