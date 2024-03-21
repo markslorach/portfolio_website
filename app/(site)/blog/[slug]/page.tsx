@@ -5,6 +5,9 @@ import { getBlogBySlug } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 
+// Components
+import { PortableTextComponent } from "@/app/components/PortableTextComponent";
+
 // Icons
 import { CalendarDaysIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 
@@ -14,7 +17,7 @@ interface Props {
   };
 }
 
-interface BlogPost {
+interface BlogPostArticle {
   title: string;
   createdAt: string;
   titleImage: any;
@@ -25,7 +28,7 @@ interface BlogPost {
 export const revalidate = 0;
 
 const BlogPage = async ({ params: { slug } }: Props) => {
-  const post: BlogPost = await getBlogBySlug(slug);
+  const post: BlogPostArticle = await getBlogBySlug(slug);
   console.log(post);
 
   return (
@@ -58,7 +61,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
       )}
 
       <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400">
-        <PortableText value={post.content} />
+        <PortableText value={post.content} components={PortableTextComponent} />
       </article>
     </section>
   );
