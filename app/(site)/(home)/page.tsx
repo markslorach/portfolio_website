@@ -1,6 +1,9 @@
 import { getBlogs, getProjects } from "@/lib/fetchData";
 import Link from "next/link";
 
+// Interface
+import { BlogPosts, Projects } from "@/app/utils/interface";
+
 // Components
 import Hero from "../../components/Hero";
 import HomeProjectList from "../../components/HomeProjectList";
@@ -9,9 +12,8 @@ import HomeBlogList from "../../components/HomeBlogList";
 export const revalidate = 0;
 
 export default async function Home() {
-  const projects = await getProjects();
-  const blogs = await getBlogs();
-  // console.log(blogs);
+  const projects: Projects[] = await getProjects();
+  const blogs: BlogPosts[] = await getBlogs();
 
   return (
     <main>

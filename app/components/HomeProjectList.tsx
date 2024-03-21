@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { Projects } from "../utils/interface";
 
-const HomeProjectList = ({ project }: any) => {
+const HomeProjectList = ({ project }: {project: Projects[]}) => {
   const animateCard = {
     initial: { opacity: 0, y: 15 },
     whileInView: { opacity: 1, y: 0 },
@@ -16,7 +17,7 @@ const HomeProjectList = ({ project }: any) => {
   return (
     <section className="mb-20">
       <div className="grid h-[800px] grid-cols-1 gap-3 sm:h-[400px] sm:grid-cols-11">
-        {project.map((project: any, idx: any) => (
+        {project.map((project, idx) => (
           <Link
             key={idx}
             href={project.githubUrl}

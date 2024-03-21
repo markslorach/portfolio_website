@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CmsNavBar = () => {
   return (
-    <nav className="bg-white pl-3 pt-3">
+    <nav className="bg-white pl-3 py-2 border-b">
       <Link href="/">
         <h1 className="text-xl font-bold tracking-wide text-blue-400">
           mark

@@ -2,11 +2,15 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+//Interface
+import { BlogPosts } from "../utils/interface";
+
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { formatDate } from "../utils/helpers";
 
-const HomeBlogList = ({ blogs }: any) => {
+
+const HomeBlogList = ({ blogs }: {blogs: BlogPosts[]}) => {
   const animateCard = {
     initial: { opacity: 0, y: 15 },
     whileInView: { opacity: 1, y: 0 },
@@ -17,7 +21,7 @@ const HomeBlogList = ({ blogs }: any) => {
   return (
     <section className="mb-28">
       <div className="flex flex-col space-y-3">
-        {blogs.map((post: any, idx: any) => {
+        {blogs.map((post, idx) => {
           const formattedDate = formatDate(post.createdAt);
 
           return (
