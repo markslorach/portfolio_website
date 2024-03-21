@@ -22,8 +22,8 @@ export async function getAboutInfo() {
   return data;
 }
 
-// Get blog by slug
-export async function getBlogBySlug(slug: string) {
+// Get blog article by slug
+export async function getBlogArticle(slug: string) {
   const query = groq`
     *[_type == "blog" && slug.current == '${slug}']{
         title,
@@ -38,7 +38,7 @@ export async function getBlogBySlug(slug: string) {
 }
 
 // Get project by slug
-export async function getProjectBySlug(slug: string) {
+export async function getProject(slug: string) {
   const query = groq`
     *[_type == "projects" && slug.current == '${slug}']{
         title,

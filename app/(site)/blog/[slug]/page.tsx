@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { formatDate } from "@/app/utils/helpers";
-import { getBlogBySlug } from "@/lib/fetchData";
+import { getBlogArticle } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 
@@ -21,17 +21,18 @@ interface Props {
 export const revalidate = 0;
 
 const BlogPage = async ({ params: { slug } }: Props) => {
-  const post: BlogPost = await getBlogBySlug(slug);
+  const post: BlogPost = await getBlogArticle(slug);
   console.log(post);
 
   return (
     <section className="mb-28">
       <div className="flex flex-col space-y-8">
-        <Link href="/blog">
-          <small className="flex items-center leading-none text-black/50 underline decoration-blue-400 decoration-2 underline-offset-2">
-            <ArrowLeftIcon className="mr-1 h-4 w-4" />
-            Back to posts
-          </small>
+        <Link
+          className="flex items-center font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2"
+          href="/blog"
+        >
+          <ArrowLeftIcon className="mr-1 h-4 w-4" />
+          Back to posts
         </Link>
         <h1 className="heading-h1 text-wrap">{post.title}</h1>
         <small className="flex items-center leading-none text-black/50">
