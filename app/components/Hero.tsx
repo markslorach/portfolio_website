@@ -18,8 +18,9 @@ const Hero = () => {
           alt="Mark Slorach Avatar"
           width={400}
           height={400}
+          quality={75}
+          priority
           className="mb-2 h-20 w-20 rounded-lg"
-          priority={true}
         />
       </figure>
       <div className="flex flex-col space-y-8">

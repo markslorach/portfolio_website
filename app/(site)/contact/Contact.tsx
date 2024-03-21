@@ -7,13 +7,13 @@ const Contact = () => {
   return (
     <form className="border rounded-lg p-3">
       <div className="grid w-full grid-cols-1 sm:grid-cols-2 items-center gap-4">
-        <div className="flex flex-col space-y-2">
+        <div className="space-y-2">
           <Label htmlFor="name" className="font-semibold">
             Name
           </Label>
           <Input type="name" id="name" placeholder="Name" />
         </div>
-        <div className="flex flex-col space-y-2">
+        <div className="space-y-2">
           <Label htmlFor="email" className="font-semibold">
             Email
           </Label>

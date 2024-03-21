@@ -51,7 +51,8 @@ const BlogPage = async ({ params: { slug } }: Props) => {
             alt={`${post.title} article image`}
             width={500}
             height={280}
-            priority={true}
+            quality={75}
+            priority
           />
         </figure>
       )}
