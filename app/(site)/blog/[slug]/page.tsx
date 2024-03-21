@@ -33,16 +33,17 @@ const BlogPage = async ({ params: { slug } }: Props) => {
       <div className="flex flex-col space-y-8">
         <Link href="/blog">
           <small className="flex items-center leading-none text-black/50 underline decoration-blue-400 decoration-2 underline-offset-2">
-            <ArrowLeftIcon className="h4 mr-1 w-4" />
+            <ArrowLeftIcon className="mr-1 h-4 w-4" />
             Back to Blog
           </small>
         </Link>
-        <h1 className="heading-h1">{post.title}</h1>
+        <h1 className="heading-h1 text-wrap">{post.title}</h1>
         <small className="flex items-center leading-none text-black/50">
           <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
           {formatDate(post.createdAt)}
         </small>
       </div>
+
       {post.titleImage && (
         <figure>
           <Image
@@ -54,6 +55,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
           />
         </figure>
       )}
+
       <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400">
         <PortableText value={post.content} />
       </article>

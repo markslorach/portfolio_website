@@ -26,11 +26,16 @@ const Hero = () => {
         <h1 className="heading-h1">
           Hello, I&apos;m{" "}
           <span>
-            <Link className="underline decoration-blue-400 decoration-[6px] underline-offset-4" href='/about'>Mark</Link>
+            <Link
+              className="underline decoration-blue-400 decoration-[6px] underline-offset-4"
+              href="/about"
+            >
+              Mark
+            </Link>
           </span>
           .
         </h1>
-        <p className="line-clamp-3 leading-relaxed tracking-[0.015rem] text-black/70 dark:text-white/70 w-full">
+        <p className="line-clamp-3 w-full text-wrap leading-relaxed tracking-[0.015rem] text-black/70 dark:text-white/70">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
           lectus nisi. Sed sit amet tincidunt purus. Fusce molestie dui
           ullamcorper nulla facilisis ornare. In in facilisis lorem. Vivamus

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Contact from "./Contact";
 
 const ContactPage = () => {
   return (
@@ -9,7 +10,7 @@ const ContactPage = () => {
         </span>
         .
       </h1>
-      <Link href="mailto:hello@markslorach" className="font-medium">hello@markslorach</Link>
+      <Contact />
     </div>
   );
 };
