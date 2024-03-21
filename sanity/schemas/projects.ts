@@ -28,7 +28,7 @@ export default {
     },
     {
       name: "projectUrl",
-      title: "Project URL",
+      title: "Deployed URL",
       type: "url",
     },
     {

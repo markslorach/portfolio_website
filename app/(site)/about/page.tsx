@@ -1,8 +1,9 @@
 import { getAboutInfo } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
-// import Image from "next/image";
+import glencoe from "@/public/images/Glencoe.jpeg";
+import Image from "next/image";
 
-export const revalidate = 0 // remove once website is complete
+// export const revalidate = 0; // remove once website is complete
 
 const AboutPage = async () => {
   const about = await getAboutInfo();
@@ -15,19 +16,23 @@ const AboutPage = async () => {
         </span>
         .
       </h1>
-      {/* <Image
-        className="mb-8 rounded-lg"
-        width={672}
-        height={290}
-        priority
-        alt="Glencoe"
-        src="/images/Glencoe.jpeg"
-      ></Image> */}
+
+      <figure>
+        <Image
+          src={glencoe}
+          alt="Glencoe mountains header image"
+          quality={75}
+          priority
+          placeholder="blur"
+          className="mb-8 rounded-lg"
+        ></Image>
+      </figure>
+
       <article className="mb-24">
-        {about.map((data:any, idx: any) => (
+        {about.map((data: any, idx: any) => (
           <div
             key={idx}
-            className="prose dark:prose-invert min-w-full leading-relaxed tracking-[0.015rem]"
+            className="prose min-w-full text-wrap leading-relaxed tracking-[0.015rem] dark:prose-invert"
           >
             <PortableText value={data.content} />
           </div>
