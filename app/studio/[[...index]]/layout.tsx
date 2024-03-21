@@ -1,8 +1,7 @@
 // Compnents
 import CmsNavBar from "@/app/components/CmsNavBar";
-import { ReactNode } from "react";
 
-export default function StudioLayout({ children }: { children: ReactNode }) {
+export default function StudioLayout({ children }: {children: React.ReactNode}) {
   return (
     <>
       <CmsNavBar />

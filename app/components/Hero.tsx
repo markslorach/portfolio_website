@@ -28,7 +28,7 @@ const Hero = () => {
           Hello, I&apos;m{" "}
           <span>
             <Link
-              className="underline decoration-blue-400 decoration-[6px] underline-offset-4"
+              className="underline decoration-blue-400 decoration-[8px] underline-offset-4"
               href="/about"
             >
               Mark

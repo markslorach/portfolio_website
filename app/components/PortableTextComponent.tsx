@@ -11,7 +11,7 @@ export const PortableTextComponent = {
         height={280}
         quality={75}
         priority
-        className="rounded-sm px-0 sm:px-5"
+        className="rounded-lg px-0 sm:px-5"
       />
     ),
   },
