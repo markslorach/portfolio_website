@@ -17,7 +17,7 @@ const HomeProjectList = ({ project }: {project: Project[]}) => {
   };
 
   return (
-    <section className="mb-20">
+    <section className="mb-4 sm:mb-20">
       <div className="grid h-[800px] grid-cols-1 gap-3 sm:h-[400px] sm:grid-cols-11">
         {project.map((project, idx) => (
           <Link

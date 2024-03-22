@@ -15,20 +15,20 @@ const Contact = () => {
             <Label htmlFor="name" className="font-semibold">
               Name
             </Label>
-            <Input type="name" id="name" placeholder="Name" />
+            <Input className="py-6" type="name" id="name" placeholder="Name" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email" className="font-semibold">
               Email
             </Label>
-            <Input type="email" id="email" placeholder="Email" />
+            <Input className="py-6" type="email" id="email" placeholder="Email" />
           </div>
         </div>
         <div className="my-10 flex flex-col space-y-2">
           <Label htmlFor="message" className="font-semibold">
             Your message
           </Label>
-          <Textarea placeholder="Type your message here." id="message" />
+          <Textarea className="py-3 h-40" placeholder="Type your message here." id="message" />
         </div>
         <Button type="submit" className="w-full">Get in touch<Send className="w-4 h-4 ml-2"/></Button>
       </form>
