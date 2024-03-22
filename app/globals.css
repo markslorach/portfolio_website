@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-y-scroll bg-neutral-100 dark:bg-slate-900;
+  @apply bg-neutral-100 dark:bg-slate-900;
 }
 
 .hero-heading {

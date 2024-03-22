@@ -12,17 +12,18 @@ interface NavLinks {
 }
 
 export const navLinks: NavLinks[] = [
-  { label: "about", href: "/about" },
+  { label: "about", href: "/about" }, 
   { label: "projects", href: "/projects" },
   { label: "blog", href: "/blog" },
   { label: "contact", href: "/contact" },
 ];
 
+
 const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="m-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
+    <nav className="mx-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
       <div className="flex items-center space-x-12">
         <Link href="/">
           <h1 className="text-xl font-bold tracking-wide text-blue-400">

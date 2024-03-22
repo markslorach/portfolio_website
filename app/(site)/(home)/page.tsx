@@ -21,9 +21,9 @@ export default async function Home() {
 
       <div className="mb-8 flex justify-between">
         <h2 className="heading-h2">Recent Projects</h2>
-        <Link 
+        <Link
           className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
-          href="/projects"
+          href="/projects#top"
         >
           View projects
         </Link>
@@ -35,7 +35,7 @@ export default async function Home() {
         <h2 className="heading-h2">Latest Posts</h2>
         <Link
           className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
-          href="/blog"
+          href="/blog#top"
         >
           View posts
         </Link>
