@@ -3,31 +3,36 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
+// Icons
+import { Send } from "lucide-react";
+
 const Contact = () => {
   return (
-    <form className="border rounded-lg p-3">
-      <div className="grid w-full grid-cols-1 sm:grid-cols-2 items-center gap-4">
-        <div className="space-y-2">
-          <Label htmlFor="name" className="font-semibold">
-            Name
-          </Label>
-          <Input type="name" id="name" placeholder="Name" />
+    <section>
+      <form className="rounded-lg border p-3">
+        <div className="grid w-full grid-cols-1 items-center gap-4 sm:grid-cols-2">
+          <div className="space-y-2">
+            <Label htmlFor="name" className="font-semibold">
+              Name
+            </Label>
+            <Input type="name" id="name" placeholder="Name" />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="email" className="font-semibold">
+              Email
+            </Label>
+            <Input type="email" id="email" placeholder="Email" />
+          </div>
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="email" className="font-semibold">
-            Email
+        <div className="my-10 flex flex-col space-y-2">
+          <Label htmlFor="message" className="font-semibold">
+            Your message
           </Label>
-          <Input type="email" id="email" placeholder="Email" />
+          <Textarea placeholder="Type your message here." id="message" />
         </div>
-      </div>
-      <div className="my-10 flex flex-col space-y-2">
-        <Label htmlFor="message" className="font-semibold">
-          Your message
-        </Label>
-        <Textarea placeholder="Type your message here." id="message" />
-      </div>
-      <Button className="w-full">Get in touch</Button>
-    </form>
+        <Button type="submit" className="w-full">Get in touch<Send className="w-4 h-4 ml-2"/></Button>
+      </form>
+    </section>
   );
 };
 
