@@ -2,8 +2,7 @@ import { getProjects } from "@/lib/fetchData";
 import ProjectList from "./ProjectList";
 
 const ProjectsPage = async () => {
-
-  const projects = await getProjects()
+  const projects = await getProjects();
 
   return (
     <section>
@@ -13,7 +12,11 @@ const ProjectsPage = async () => {
         </span>
         .
       </h1>
-      <ProjectList projects={projects}/>
+      {projects ? (
+        <ProjectList projects={projects} />
+      ) : (
+        <p>Well this is embarrassing!</p>
+      )}
     </section>
   );
 };
