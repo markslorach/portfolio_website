@@ -8,12 +8,14 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section className="flex min-h-screen flex-col">
       <header>
         <NavBar />
       </header>
-      <main className="mx-auto mt-20 max-w-2xl px-4 md:px-0">{children}</main>
-      <footer className="pt-28 mx-auto max-w-2xl px-4 md:px-0">
+      <div className="flex-grow">
+        <main className="mx-auto mt-20 max-w-2xl px-4 md:px-0">{children}</main>
+      </div>
+      <footer className="mx-auto max-w-2xl px-4 pt-28 md:px-0">
         <Footer />
       </footer>
     </section>
