@@ -1,7 +1,8 @@
+import BlogList from "@/app/components/BlogList";
 import { getBlogs } from "@/lib/fetchData";
 
 // Components
-import BlogList from "./BlogList";
+
 
 export const revalidate = 0;
 

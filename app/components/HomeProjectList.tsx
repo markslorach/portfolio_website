@@ -8,7 +8,7 @@ import { Project } from "../utils/interface";
 // Icons
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
-const HomeProjectList = ({ project }: {project: Project[]}) => {
+const HomeProjectList = ({ project }: { project: Project[] }) => {
   const animateCard = {
     initial: { opacity: 0, y: 15 },
     whileInView: { opacity: 1, y: 0 },

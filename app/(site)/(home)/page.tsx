@@ -7,7 +7,7 @@ import { BlogPost, Project } from "@/app/utils/interface";
 // Components
 import Hero from "../../components/Hero";
 import HomeProjectList from "../../components/HomeProjectList";
-import HomeBlogList from "../../components/HomeBlogList";
+import BlogList from "../../components/BlogList";
 
 export const revalidate = 0;
 
@@ -50,7 +50,7 @@ export default async function Home() {
           </Link>
         </div>
 
-        <HomeBlogList blogs={blogs.slice(0, 4)} />
+        <BlogList blogs={blogs.slice(0, 4)} />
         <Link
           className="font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:hidden"
           href="/blog#top"
