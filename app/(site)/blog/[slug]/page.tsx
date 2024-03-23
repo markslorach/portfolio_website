@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { formatDate } from "@/app/utils/helpers";
 import { getBlogArticle } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
@@ -22,7 +23,9 @@ export const revalidate = 0;
 
 const BlogPage = async ({ params: { slug } }: Props) => {
   const post: BlogPost = await getBlogArticle(slug);
-  console.log(post);
+  // console.log(post);
+
+  if(!post) notFound()
 
   return (
     <section className="mb-28">
@@ -34,18 +37,18 @@ const BlogPage = async ({ params: { slug } }: Props) => {
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back to posts
         </Link>
-        <h1 className="hero-heading text-wrap">{post.title}</h1>
+        <h1 className="hero-heading text-wrap">{post?.title}</h1>
         <small className="flex items-center leading-none text-black/50">
           <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
-          {formatDate(post.createdAt)}
+          {formatDate(post?.createdAt)}
         </small>
       </div>
 
-      {post.titleImage && (
+      {post?.titleImage && (
         <figure>
           <Image
-            src={urlForImage(post.titleImage)}
-            alt={`${post.title} article image`}
+            src={urlForImage(post?.titleImage)}
+            alt={`${post?.title} article image`}
             width={500}
             height={280}
             quality={75}
@@ -55,7 +58,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
       )}
 
       <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400">
-        <PortableText value={post.content} components={PortableTextComponent} />
+        <PortableText value={post?.content} components={PortableTextComponent} />
       </article>
     </section>
   );
