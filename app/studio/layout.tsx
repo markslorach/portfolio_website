@@ -1,10 +1,10 @@
 // Compnents
-import CmsNavBar from "@/app/components/CmsNavBar";
+import StudioNavBar from "@/app/studio/StudioNavBar";
 
 export default function StudioLayout({ children }: {children: React.ReactNode}) {
   return (
     <div>
-      <CmsNavBar />
+      <StudioNavBar/>
       <main>{children}</main>
     </div>
   );

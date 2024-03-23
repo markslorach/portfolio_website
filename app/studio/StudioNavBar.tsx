@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const CmsNavBar = () => {
+const StudioNavBar = () => {
   return (
     <nav className="bg-white pl-3 py-2 border-b">
       <Link href="/">
@@ -13,4 +13,4 @@ const CmsNavBar = () => {
   );
 };
 
-export default CmsNavBar;
+export default StudioNavBar;
