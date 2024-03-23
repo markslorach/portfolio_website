@@ -21,7 +21,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
   const pathname = usePathname();
 
   return (
-    <section className="mb-4 sm:mb-28">
+    <section className="mb-4 sm:mb-0">
       <div className="flex flex-col space-y-3">
         {blogs.map((post, idx) => {
           const formattedDate = formatDate(post.createdAt);

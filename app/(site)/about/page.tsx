@@ -27,7 +27,7 @@ const AboutPage = async () => {
         .
       </h1>
 
-      <article className="mb-24">
+      <article>
         {about.map((data: any, idx: any) => (
           <div
             key={idx}

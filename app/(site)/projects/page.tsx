@@ -12,10 +12,10 @@ const ProjectsPage = async () => {
         </span>
         .
       </h1>
-      {projects ? (
+      {projects.length > 0 ? (
         <ProjectList projects={projects} />
       ) : (
-        <p>Well this is embarrassing!</p>
+        <p className="mb-28 text-2xl font-bold text-black/50">Well this is embarrassing...</p>
       )}
     </section>
   );

@@ -10,7 +10,7 @@ export async function getProjects() {
 
 // Get blog card data
 export async function getBlogs() {
-  const query = groq`*[_type == "blog"] | order(_createdAt desc) {title, description, slug, createdAt}`;
+  const query = groq`*[_type == "blog"] | order(_createdAt desc) {title, description, slug, createdAt, tags}`;
   const data = await client.fetch(query);
   return data;
 }

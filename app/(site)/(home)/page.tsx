@@ -17,61 +17,63 @@ export default async function Home() {
 
   return (
     <main>
-      <div className="mb-28">
-        <Hero />
+      <Hero />
 
-        <section>
-          <div className="mb-8 flex justify-between">
-            <h2 className="heading-h2">Recent Projects</h2>
-            <Link
-              className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
-              href="/projects#top"
-            >
-              View all projects
-            </Link>
-          </div>
+      <section>
+        <div className="mb-8 flex justify-between">
+          <h2 className="heading-h2">Recent Projects</h2>
+          <Link
+            className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
+            href="/projects#top"
+          >
+            View all projects
+          </Link>
+        </div>
 
-          {projects ? (
-            <HomeProjectList project={projects.slice(0, 4)} />
-          ) : (
-            <p>Well This is embarrassing!</p>
-          )}
+        {projects.length > 0 ? (
+          <HomeProjectList project={projects.slice(0, 4)} />
+        ) : (
+          <p className="mb-28 text-2xl font-bold text-black/50">
+            Well this is embarrassing...
+          </p>
+        )}
 
-          <div className="mb-20">
-            <Link
-              className="font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:hidden"
-              href="/projects#top"
-            >
-              View all projects
-            </Link>
-          </div>
-        </section>
-
-        <section>
-          <div className="mb-8 flex justify-between">
-            <h2 className="heading-h2">Latest Posts</h2>
-            <Link
-              className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
-              href="/blog#top"
-            >
-              View all posts
-            </Link>
-          </div>
-
-          {blogs ? (
-            <BlogList blogs={blogs.slice(0, 4)} />
-          ) : (
-            <p>Well this is embarrassing!</p>
-          )}
-
+        <div className="mb-20">
           <Link
             className="font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:hidden"
+            href="/projects#top"
+          >
+            View all projects
+          </Link>
+        </div>
+      </section>
+
+      <section>
+        <div className="mb-8 flex justify-between">
+          <h2 className="heading-h2">Latest Posts</h2>
+          <Link
+            className="hidden flex-col justify-end font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:inline-flex"
             href="/blog#top"
           >
             View all posts
           </Link>
-        </section>
-      </div>
+        </div>
+
+        {blogs.length > 0 ? (
+          <BlogList blogs={blogs.slice(0, 4)} />
+        ) : (
+          <p className="text-2xl font-bold leading-none text-black/50">
+            Well this is embarrassing...
+          </p>
+        )}
+
+        <Link
+          className="font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:hidden"
+          href="/blog#top"
+        >
+          View all posts
+        </Link>
+      </section>
     </main>
   );
 }

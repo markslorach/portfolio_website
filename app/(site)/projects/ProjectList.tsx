@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ProjectList = ({ projects }: any) => {
   return (
-    <section className="mb-28">
+    <section>
       <div className="grid h-[800px] grid-cols-1 gap-3 sm:h-[400px] sm:grid-cols-11">
         {projects
           .map((project: any, idx: any) => (

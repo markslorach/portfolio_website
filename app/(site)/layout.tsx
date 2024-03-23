@@ -13,7 +13,7 @@ export default function SiteLayout({
         <NavBar />
       </header>
       <main className="mx-auto mt-20 max-w-2xl px-4 md:px-0">{children}</main>
-      <footer className="mx-auto max-w-2xl px-4 md:px-0">
+      <footer className="pt-28 mx-auto max-w-2xl px-4 md:px-0">
         <Footer />
       </footer>
     </section>

@@ -23,12 +23,12 @@ export const revalidate = 0;
 
 const BlogPage = async ({ params: { slug } }: Props) => {
   const post: BlogPost = await getBlogArticle(slug);
-  // console.log(post);
+  console.log(post);
 
   if(!post) notFound()
 
   return (
-    <section className="mb-28">
+    <section className="-mb-6">
       <div className="flex flex-col space-y-8">
         <Link
           className="flex items-center font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2"
