@@ -66,13 +66,14 @@ export default async function Home() {
             Well this is embarrassing...
           </p>
         )}
-
-        <Link
-          className="font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:hidden"
-          href="/blog#top"
-        >
-          View all posts
-        </Link>
+        {blogs.length > 0 && (
+          <Link
+            className="font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2 sm:hidden"
+            href="/blog#top"
+          >
+            View all posts
+          </Link>
+        )}
       </section>
     </main>
   );
