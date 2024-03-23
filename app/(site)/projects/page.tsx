@@ -1,8 +1,13 @@
 import { getProjects } from "@/lib/fetchData";
+
+// Interface
+import { Project } from "@/app/utils/interface";
+
+// Components
 import ProjectList from "./ProjectList";
 
 const ProjectsPage = async () => {
-  const projects = await getProjects();
+  const projects: Project[] = await getProjects();
 
   return (
     <section>
@@ -15,7 +20,9 @@ const ProjectsPage = async () => {
       {projects.length > 0 ? (
         <ProjectList projects={projects} />
       ) : (
-        <p className="mb-28 text-2xl font-bold text-black/50">Well this is embarrassing...</p>
+        <p className="text-2xl font-bold leading-none text-black/50">
+          Well this is embarrassing...
+        </p>
       )}
     </section>
   );

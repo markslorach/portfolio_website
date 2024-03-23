@@ -9,7 +9,7 @@ import Hero from "../../components/Hero";
 import HomeProjectList from "../../components/HomeProjectList";
 import BlogList from "../../components/BlogList";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 export default async function Home() {
   const projects: Project[] = await getProjects();
@@ -33,7 +33,7 @@ export default async function Home() {
         {projects.length > 0 ? (
           <HomeProjectList project={projects.slice(0, 4)} />
         ) : (
-          <p className="mb-28 text-2xl font-bold text-black/50">
+          <p className="text-2xl font-bold leading-none text-black/50">
             Well this is embarrassing...
           </p>
         )}

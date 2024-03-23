@@ -1,13 +1,16 @@
 import { getBlogs } from "@/lib/fetchData";
 
+// Interface
+import { BlogPost } from "@/app/utils/interface";
+
 // Components
 import BlogList from "@/app/components/BlogList";
 
 export const revalidate = 0;
 
 const BlogPage = async () => {
-  const blogs = await getBlogs();
-  console.log(blogs)
+  const blogs: BlogPost[] = await getBlogs();
+  console.log(blogs);
 
   return (
     <section>
@@ -20,7 +23,9 @@ const BlogPage = async () => {
       {blogs.length > 0 ? (
         <BlogList blogs={blogs.slice(0, 4)} />
       ) : (
-        <p className="mb-28 text-2xl font-bold text-black/50">Well this is embarrassing...</p>
+        <p className="text-2xl font-bold leading-none text-black/50">
+          Well this is embarrassing...
+        </p>
       )}
     </section>
   );

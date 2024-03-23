@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "projects",
   type: "document",
@@ -7,6 +9,7 @@ export default {
       name: "title",
       type: "string",
       title: "Project Title",
+      validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
       name: "slug",
@@ -15,11 +18,13 @@ export default {
       options: {
         source: "title",
       },
+      validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
       name: "description",
       type: "string",
       title: "Project Description",
+      validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
       name: "githubUrl",
