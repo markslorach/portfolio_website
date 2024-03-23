@@ -15,7 +15,7 @@ export default function SiteLayout({
       <div className="flex-grow">
         <main className="mx-auto mt-20 max-w-2xl px-4 md:px-0">{children}</main>
       </div>
-      <footer className="mx-auto max-w-2xl px-4 pt-28 md:px-0">
+      <footer className="mx-auto w-full max-w-2xl px-4 pt-28 md:px-0">
         <Footer />
       </footer>
     </section>

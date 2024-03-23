@@ -7,7 +7,7 @@ import { navLinks } from "./NavBar";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col space-y-8 border-t border-black/10 py-8 text-center dark:border-white/70">
+    <div className="space-y-8 border-t border-black/10 py-8 text-center dark:border-white/70">
       <ul className="flex justify-center space-x-4 tracking-wide text-black/50 dark:text-white/70">
         {navLinks.map((link, idx) => (
           <li key={idx}>
