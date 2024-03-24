@@ -25,7 +25,7 @@ const Hero = () => {
       </figure>
       <div className="flex flex-col space-y-8">
         <h1 className="hero-heading">
-          Hello, I&apos;m{" "}
+          Hello! I&apos;m{" "}
           <span>
             <Link
               className="underline decoration-blue-400 decoration-[8px] underline-offset-4"
@@ -50,9 +50,7 @@ const Hero = () => {
               target="_blank"
               className="rounded-lg bg-slate-200/60 p-2 dark:bg-white/10"
             >
-              {
-                <link.icon className="h-6 w-6 text-black/70 dark:text-white/80" />
-              }
+              <link.icon className="h-6 w-6 text-black/70 dark:text-white/80" />
             </Link>
           ))}
         </div>

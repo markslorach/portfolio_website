@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
       <div>
         <small className="text-black/40">
-          Built with{" "}
+          Built using{" "}
           <Link
             href="https://nextjs.org/"
             target="_blank"

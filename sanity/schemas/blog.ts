@@ -3,7 +3,7 @@ import { Rule } from "sanity";
 export default {
   name: "blog",
   type: "document",
-  title: "Blog",
+  title: "Blog Articles",
   fields: [
     {
       name: "title",
@@ -54,7 +54,7 @@ export default {
         },
         {
           type: "code",
-        }
+        },
       ],
     },
     {
@@ -63,8 +63,8 @@ export default {
       title: "Tags",
       of: [
         {
-          type: 'reference',
-          to: [{type: 'tag'}]
+          type: "reference",
+          to: [{ type: "tag" }],
         },
       ],
     },

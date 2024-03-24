@@ -18,7 +18,6 @@ export const navLinks: NavLinks[] = [
   { label: "contact", href: "/contact" },
 ];
 
-
 const NavBar = () => {
   const pathname = usePathname();
 
@@ -39,7 +38,7 @@ const NavBar = () => {
               className={pathname === link.href ? "text-blue-400" : ""}
             >
               <Link
-                className="hidden text-base transition-colors hover:text-blue-400 sm:inline-flex"
+                className="hidden transition-colors hover:text-blue-400 sm:inline-flex"
                 href={link.href}
               >
                 {`${link.label}`}

@@ -48,16 +48,6 @@ export default {
       ],
     },
     {
-      name: "techStack",
-      title: "Tech Stack",
-      type: "array",
-      of: [
-        {
-          type: "string",
-        },
-      ],
-    },
-    {
       name: "content",
       type: "array",
       title: "Project Information",
@@ -68,6 +58,17 @@ export default {
         {
           type: "image",
           fields: [{ type: "text", name: "alt", title: "Alt" }],
+        },
+      ],
+    },
+    {
+      name: "tags",
+      type: "array",
+      title: "Tags",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "tag" }],
         },
       ],
     },

@@ -1,7 +1,7 @@
 export default {
   name: "tag",
   type: "document",
-  title: "Blog Tags",
+  title: "Tags",
 
   fields: [
     {
