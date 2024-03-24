@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { urlForImage } from "@/sanity/lib/image";
+import CodeBlock from "./CodeBlock";
 
 export const PortableTextComponent = {
   types: {
@@ -15,6 +16,9 @@ export const PortableTextComponent = {
           className="rounded-lg"
         />
       </figure>
+    ),
+    code: ({ value }: any) => (
+      <CodeBlock language={value.language || "text"}>{value.code}</CodeBlock>
     ),
   },
 };
