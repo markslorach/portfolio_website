@@ -26,13 +26,8 @@ const Hero = () => {
       <div className="flex flex-col space-y-8">
         <h1 className="hero-heading">
           Hello! I&apos;m{" "}
-          <span>
-            <Link
-              className="underline decoration-blue-400 decoration-[8px] underline-offset-4"
-              href="/about"
-            >
-              Mark
-            </Link>
+          <span className="text-blue-400">
+            <Link href="/about">Mark</Link>
           </span>
           .
         </h1>
@@ -42,7 +37,7 @@ const Hero = () => {
           ullamcorper nulla facilisis ornare. In in facilisis lorem. Vivamus
           mattis, tellus ac molestie mollis, est magna vestibulum ante.
         </p>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 pt-1">
           {socialLinks.map((link, idx) => (
             <Link
               key={idx}

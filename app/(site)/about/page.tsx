@@ -20,11 +20,10 @@ const AboutPage = async () => {
           className="mb-28 rounded-lg"
         ></Image>
       </figure> */}
+
       <h1 className="hero-heading mb-20">
-        <span className="underline decoration-blue-400 decoration-[8px] underline-offset-4 border-solid border-spacing-3 border-spacing-y-3">
-          About
-        </span>
-        .
+        About
+        <span className="text-blue-400">.</span>
       </h1>
 
       <article>

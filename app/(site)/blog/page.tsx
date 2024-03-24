@@ -15,11 +15,10 @@ const BlogPage = async () => {
   return (
     <section>
       <h1 className="hero-heading mb-20">
-        <span className="underline decoration-blue-400 decoration-[8px] underline-offset-4">
           Blog
-        </span>
-        .
-      </h1>
+          <span className="text-blue-400">.</span>
+        </h1>
+
       {blogs.length > 0 ? (
         <BlogList blogs={blogs.slice(0, 4)} />
       ) : (
