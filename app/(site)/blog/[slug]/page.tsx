@@ -48,7 +48,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
 
           <div className="flex items-center space-x-2">
             {post.tags.map((tag) => (
-              <Badge className="text-black/50" variant="outline" key={tag._id}>
+              <Badge className="text-black/50 border-blue-400/30" variant="outline" key={tag._id}>
                 <Link href={`/tags/${tag.slug.current}`}>{`#${tag.name}`}</Link>
               </Badge>
             ))}

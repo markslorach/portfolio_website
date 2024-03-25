@@ -11,12 +11,12 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { formatDate } from "../utils/helpers";
 
 const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
-  const animateCard = {
-    initial: { opacity: 0, y: 15 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.5, delay: 0.1, ease: "easeOut" },
-  };
+  // const animateCard = {
+  //   initial: { opacity: 0, y: 15 },
+  //   whileInView: { opacity: 1, y: 0 },
+  //   viewport: { once: true },
+  //   transition: { duration: 0.5, delay: 0.1, ease: "easeOut" },
+  // };
 
   const pathname = usePathname();
 
@@ -34,7 +34,8 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                   key={post._id}
                   className="projectCard"
                 >
-                  <motion.div {...animateCard}>
+                  <motion.div >
+                   {/* {...animateCard}> */}
                     <div className="flex items-center justify-between">
                       <div className="mb-2 flex items-center">
                         <h2 className="leading-1 line-clamp-1 font-semibold">
