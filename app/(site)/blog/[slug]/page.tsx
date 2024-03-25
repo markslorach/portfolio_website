@@ -38,27 +38,29 @@ const BlogPage = async ({ params: { slug } }: Props) => {
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
           Back to posts
         </Link>
-        <h1 className="hero-heading text-wrap">{post?.title}</h1>
-        
+        <h1 className="hero-heading text-wrap">{post.title}</h1>
+
         <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
           <small className="flex items-center leading-none text-black/50">
             <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
-            {formatDate(post?.createdAt)}
+            {formatDate(post.createdAt)}
           </small>
 
           <div className="flex items-center space-x-2">
             {post.tags.map((tag) => (
-              <Badge variant="outline" key={tag._id}>{`#${tag.name}`}</Badge>
+              <Badge className="text-black/50" variant="outline" key={tag._id}>
+                <Link href={`/tags/${tag.slug.current}`}>{`#${tag.name}`}</Link>
+              </Badge>
             ))}
           </div>
         </div>
       </div>
 
-      {post?.titleImage && (
+      {post.titleImage && (
         <figure>
           <Image
-            src={urlForImage(post?.titleImage)}
-            alt={`${post?.title} article image`}
+            src={urlForImage(post.titleImage)}
+            alt={`${post.title} article image`}
             width={500}
             height={280}
             quality={75}
@@ -68,10 +70,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
       )}
 
       <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400">
-        <PortableText
-          value={post?.content}
-          components={PortableTextComponent}
-        />
+        <PortableText value={post.content} components={PortableTextComponent} />
       </article>
     </section>
   );

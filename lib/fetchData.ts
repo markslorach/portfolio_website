@@ -63,3 +63,16 @@ export async function getProject(slug: string) {
   const data = await client.fetch(query);
   return data;
 }
+
+// Get tags
+export async function getTags() {
+  const query = groq`
+  *[_type == "tag"] | order(lower(name) asc) {
+  _id,
+  name,
+  slug,
+}`;
+
+  const data = await client.fetch(query);
+  return data;
+}
