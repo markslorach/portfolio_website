@@ -6,8 +6,8 @@ import { BlogPost, Project } from "@/app/utils/interface";
 
 // Components
 import Hero from "../../components/Hero";
-import HomeProjectList from "../../components/HomeProjectList";
 import BlogList from "../../components/BlogList";
+import ProjectList from "@/app/components/ProjectList";
 
 export const revalidate = 0;
 
@@ -15,7 +15,7 @@ export default async function Home() {
   const projects: Project[] = await getProjects();
   const blogs: BlogPost[] = await getBlogs();
 
-  console.log(blogs)
+  console.log(blogs);
 
   return (
     <main>
@@ -33,7 +33,7 @@ export default async function Home() {
         </div>
 
         {projects.length > 0 ? (
-          <HomeProjectList project={projects.slice(0, 4)} />
+          <ProjectList project={projects.slice(0, 4)} />
         ) : (
           <p className="text-2xl font-bold leading-none text-black/50">
             Well this is embarrassing...

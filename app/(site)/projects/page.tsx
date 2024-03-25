@@ -4,7 +4,7 @@ import { getProjects } from "@/lib/fetchData";
 import { Project } from "@/app/utils/interface";
 
 // Components
-import ProjectList from "./ProjectList";
+import ProjectList from "../../components/ProjectList";
 
 const ProjectsPage = async () => {
   const projects: Project[] = await getProjects();

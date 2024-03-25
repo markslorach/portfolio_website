@@ -23,10 +23,16 @@ const ProjectList = ({ project }: { project: Project[] }) => {
                   {project.description}
                 </small>
                 <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <Badge key={tag._id} variant="outline" className="text-black/50"><small>{tag.name}</small></Badge>
-                ))}
-              </div>
+                  {project.tags.map((tag) => (
+                    <Badge
+                      key={tag._id}
+                      variant="outline"
+                      className="border-blue-400/30 text-black/50"
+                    >
+                      <small>{tag.name}</small>
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </Link>
           ))
