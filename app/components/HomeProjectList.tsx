@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 
 // Interface
 import { Project } from "../utils/interface";
@@ -26,13 +27,18 @@ const HomeProjectList = ({ project }: { project: Project[] }) => {
             target="_blank"
             className={`projectCard ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
           >
-            <motion.div {...animateCard}>
-              <h2 className="item-center mb-2 flex font-semibold leading-none">
+            <motion.div {...animateCard} className="space-y-3">
+              <h2 className="item-center flex font-semibold leading-none">
                 {project.title} <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </h2>
               <small className="line-clamp-2 text-black/50">
                 {project.description}
               </small>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <Badge key={tag._id} variant="outline" className="text-black/50"><small>{tag.name}</small></Badge>
+                ))}
+              </div>
             </motion.div>
           </Link>
         ))}

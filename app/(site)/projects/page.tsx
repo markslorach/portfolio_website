@@ -17,7 +17,7 @@ const ProjectsPage = async () => {
         </h1>
       
       {projects.length > 0 ? (
-        <ProjectList projects={projects} />
+        <ProjectList project={projects} />
       ) : (
         <p className="text-2xl font-bold leading-none text-black/50">
           Well this is embarrassing...
