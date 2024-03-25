@@ -6,7 +6,7 @@ import Link from "next/link";
 const ProjectList = ({ project }: { project: Project[] }) => {
   return (
     <section>
-      <div className="grid h-[800px] grid-cols-1 gap-3 sm:h-[400px] sm:grid-cols-11">
+      <div className="mb-4 grid h-[800px] grid-cols-1 gap-3 sm:h-[400px] sm:grid-cols-11 sm:mb-0">
         {project
           .map((project, idx) => (
             <Link
