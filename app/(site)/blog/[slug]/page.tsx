@@ -12,6 +12,7 @@ import { PortableTextComponent } from "@/app/components/PortableTextComponent";
 // Icons
 import { CalendarDaysIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { BlogPost } from "@/app/utils/interface";
+import { Badge } from "@/components/ui/badge";
 
 interface Props {
   params: {
@@ -25,7 +26,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
   const post: BlogPost = await getBlogArticle(slug);
   console.log(post);
 
-  if(!post) notFound()
+  if (!post) notFound();
 
   return (
     <section className="-mb-6">
@@ -38,10 +39,19 @@ const BlogPage = async ({ params: { slug } }: Props) => {
           Back to posts
         </Link>
         <h1 className="hero-heading text-wrap">{post?.title}</h1>
-        <small className="flex items-center leading-none text-black/50">
-          <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
-          {formatDate(post?.createdAt)}
-        </small>
+        
+        <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
+          <small className="flex items-center leading-none text-black/50">
+            <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
+            {formatDate(post?.createdAt)}
+          </small>
+
+          <div className="flex items-center space-x-2">
+            {post.tags.map((tag) => (
+              <Badge variant="outline" key={tag._id}>{`#${tag.name}`}</Badge>
+            ))}
+          </div>
+        </div>
       </div>
 
       {post?.titleImage && (
@@ -58,7 +68,10 @@ const BlogPage = async ({ params: { slug } }: Props) => {
       )}
 
       <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400">
-        <PortableText value={post?.content} components={PortableTextComponent} />
+        <PortableText
+          value={post?.content}
+          components={PortableTextComponent}
+        />
       </article>
     </section>
   );

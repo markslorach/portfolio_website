@@ -23,7 +23,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
   return (
     <section className="mb-4 sm:mb-0">
       <div className="flex flex-col space-y-3">
-        {blogs.map((post, idx) => {
+        {blogs.map((post) => {
           const formattedDate = formatDate(post.createdAt);
 
           return (
@@ -31,7 +31,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
               {pathname === "/" ? (
                 <Link
                   href={`/blog/${post.slug.current}`}
-                  key={idx}
+                  key={post._id}
                   className="projectCard"
                 >
                   <motion.div {...animateCard}>
@@ -55,7 +55,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
               ) : (
                 <Link
                   href={`/blog/${post.slug.current}`}
-                  key={idx}
+                  key={post._id}
                   className="projectCard"
                 >
                   <div className="flex items-center justify-between">

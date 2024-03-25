@@ -10,14 +10,25 @@ export async function getProjects() {
 
 // Get blog card data
 export async function getBlogs() {
-  const query = groq`*[_type == "blog"] | order(_createdAt desc) {title, description, slug, createdAt, tags}`;
+  const query = groq`*[_type == "blog"] | order(_createdAt desc) {
+    _id,
+    title, 
+    description, 
+    slug, 
+    createdAt,
+    tags[]-> {
+          _id,
+          slug,
+          name,
+        }
+    }`;
   const data = await client.fetch(query);
   return data;
 }
 
 // Get about page data
 export async function getAboutInfo() {
-  const query = groq`*[_type == "about"]{title, content}`;
+  const query = groq`*[_type == "about"] {title, content}`;
   const data = await client.fetch(query);
   return data;
 }
@@ -25,12 +36,17 @@ export async function getAboutInfo() {
 // Get blog article by slug
 export async function getBlogArticle(slug: string) {
   const query = groq`
-    *[_type == "blog" && slug.current == '${slug}']{
+    *[_type == "blog" && slug.current == '${slug}'] {
+        _id,
         title,
         createdAt,
         titleImage,
         content,
-        tags
+        tags[]-> {
+          _id,
+          slug,
+          name,
+        }
       }[0]
   `;
   const data = await client.fetch(query);

@@ -15,6 +15,8 @@ export default async function Home() {
   const projects: Project[] = await getProjects();
   const blogs: BlogPost[] = await getBlogs();
 
+  console.log(blogs)
+
   return (
     <main>
       <Hero />
