@@ -3,7 +3,18 @@ import { groq } from "next-sanity";
 
 // Get project card data
 export async function getProjects() {
-  const query = groq`*[_type == "projects"] | order(_createdAt desc) {title, description, githubUrl, slug}`;
+  const query = groq`*[_type == "projects"] | order(_createdAt desc) {
+    _id,
+    title,
+    description,
+    githubUrl,
+    slug,
+    tags[]-> {
+          _id,
+          slug,
+          name,
+        }
+  }`;
   const data = await client.fetch(query);
   return data;
 }
@@ -79,8 +90,8 @@ export async function getTags() {
 
 // Get project by tag
 export async function getPostsByTag(slug: string) {
-  const query = groq`*[_type == "blog" && references(*[_type == "tag" && slug.current == "${slug}"]._id)]`
+  const query = groq`*[_type == "blog" && references(*[_type == "tag" && slug.current == "${slug}"]._id)]`;
 
-  const data = await client.fetch(query)
-  return data
+  const data = await client.fetch(query);
+  return data;
 }

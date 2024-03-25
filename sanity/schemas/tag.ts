@@ -10,7 +10,7 @@ export default {
       title: "Tag Name",
     },
     {
-      name: "slug", // change to tag
+      name: "slug",
       type: "slug",
       title: "Slug",
       options: {

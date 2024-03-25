@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { BlogPost } from "@/app/utils/interface";
 import { getPostsByTag } from "@/lib/fetchData";
+
+//Interface
+import { BlogPost } from "@/app/utils/interface";
 
 // Components
 import BlogList from "@/app/components/BlogList";
@@ -11,6 +13,8 @@ interface Props {
     slug: string;
   };
 }
+
+export const revalidate = 0;
 
 const TagPage = async ({ params: { slug } }: Props) => {
   const blogs: BlogPost[] = await getPostsByTag(slug);

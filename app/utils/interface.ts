@@ -4,6 +4,7 @@ export interface Project {
   githubUrl: string;
   slug: { current: string };
   content: any;
+  tags: Array<Tag>;
   _id: string;
 }
 
