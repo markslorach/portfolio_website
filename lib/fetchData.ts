@@ -64,15 +64,23 @@ export async function getProject(slug: string) {
   return data;
 }
 
-// Get tags
+// Get all tags
 export async function getTags() {
   const query = groq`
   *[_type == "tag"] | order(lower(name) asc) {
-  _id,
-  name,
-  slug,
+    _id,
+    name,
+    slug,
 }`;
 
   const data = await client.fetch(query);
   return data;
+}
+
+// Get project by tag
+export async function getPostsByTag(slug: string) {
+  const query = groq`*[_type == "blog" && references(*[_type == "tag" && slug.current == "${slug}"]._id)]`
+
+  const data = await client.fetch(query)
+  return data
 }
