@@ -95,3 +95,15 @@ export async function getPostsByTag(slug: string) {
   const data = await client.fetch(query);
   return data;
 }
+
+// Get all categories
+export async function getCategories() {
+  const query = groq`*[_type == "category"] {
+    name,
+    slug,
+    _id
+  }`;
+
+  const data = await client.fetch(query);
+  return data;
+}
