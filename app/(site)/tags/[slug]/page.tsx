@@ -39,7 +39,7 @@ const TagPage = async ({ params: { slug } }: Props) => {
         <BlogList blogs={blogs} />
       ) : (
         <p className="text-wrap text-2xl font-bold leading-none text-black/50">
-          It looks like there&apos;s currently no posts for this category...
+          It looks like there&apos;s currently no articles for this category...
         </p>
       )}
     </section>
