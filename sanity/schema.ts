@@ -4,7 +4,8 @@ import blog from "./schemas/blog";
 import about from "./schemas/about";
 import tag from "./schemas/tag";
 import resources from "./schemas/resources";
+import category from "./schemas/category";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blog, tag, projects, resources, about],
+  types: [projects, blog, tag, resources, category, about],
 };

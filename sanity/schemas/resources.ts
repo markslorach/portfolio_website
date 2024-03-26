@@ -18,13 +18,13 @@ export default {
       validation: (Rule: Rule) => Rule.required().error("Required"),
     },
     {
-      name: "tags",
+      name: "categories",
       type: "array",
-      title: "Tags",
+      title: "Categories",
       of: [
         {
           type: "reference",
-          to: [{ type: "tag" }],
+          to: [{ type: "category" }],
         },
       ],
     },
