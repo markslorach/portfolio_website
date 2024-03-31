@@ -15,7 +15,6 @@ export const navLinks: NavLinks[] = [
   { label: "about", href: "/about" },
   { label: "projects", href: "/projects" },
   { label: "blog", href: "/blog" },
-  // { label: "links", href: "/links" },
   { label: "contact", href: "/contact" },
 ];
 
@@ -26,7 +25,7 @@ const NavBar = () => {
     <nav className="mx-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
       <div className="flex items-center space-x-12">
         <Link href="/">
-          <h1 className="text-xl font-bold tracking-wide text-blue-400">
+          <h1 className="text-xl font-bold tracking-wide text-[#8cbdf8]">
             mark
             <span className="text-black/50 dark:text-white/70">slorach</span>.
           </h1>
@@ -36,13 +35,13 @@ const NavBar = () => {
           {navLinks.map((link, idx) => (
             <li
               key={idx}
-              className={pathname === link.href ? "text-blue-400" : ""}
+              className={pathname === link.href ? "text-[#8cbdf8]" : ""}
             >
               <Link
-                className="hidden transition-colors hover:text-blue-400 sm:inline-flex"
+                className="hidden transition-colors hover:text-[#8cbdf8] sm:inline-flex"
                 href={link.href}
               >
-                {`${link.label}`}
+                {link.label}
               </Link>
             </li>
           ))}
