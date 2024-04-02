@@ -44,11 +44,11 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                         <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                       </div>
 
-                      <small className="mb-3.5 hidden text-xs leading-none text-black/30 sm:block">
+                      <small className="mb-3.5 hidden text-xs leading-none sm:block">
                         {formattedDate}
                       </small>
                     </div>
-                    <small className="leading-1 line-clamp-1 text-black/50">
+                    <small className="leading-1 line-clamp-1">
                       {post.description}
                     </small>
                   </motion.div>

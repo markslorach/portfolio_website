@@ -32,7 +32,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
     <section className="-mb-6">
       <div className="flex flex-col space-y-8">
         <Link
-          className="flex items-center font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2"
+          className="flex items-center font-medium underline decoration-blue-400 decoration-2 underline-offset-2"
           href="/blog"
         >
           <ArrowLeftIcon className="mr-1 h-4 w-4" />
@@ -41,14 +41,14 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         <h1 className="hero-heading text-wrap">{post.title}</h1>
 
         <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
-          <small className="flex items-center leading-none text-black/50 font-medium">
+          <small className="flex items-center leading-none font-medium">
             <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
             {formatDate(post.createdAt)}
           </small>
 
           <div className="flex items-center space-x-2">
             {post.tags.map((tag) => (
-              <Badge className="text-black/50 border-blue-400/30" variant="outline" key={tag._id}>
+              <Badge className="border-blue-400/30" variant="outline" key={tag._id}>
                 <Link href={`/tags/${tag.slug.current}#top`}>{`#${tag.name}`}</Link>
               </Badge>
             ))}

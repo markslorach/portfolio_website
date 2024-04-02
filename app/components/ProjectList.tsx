@@ -19,7 +19,7 @@ const ProjectList = ({ project }: { project: Project[] }) => {
                 <h2 className="item-center flex font-semibold leading-none">
                   {project.title} <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                 </h2>
-                <small className="line-clamp-2 text-black/50">
+                <small className="line-clamp-2">
                   {project.description}
                 </small>
                 <div className="flex flex-wrap gap-2">
@@ -27,7 +27,7 @@ const ProjectList = ({ project }: { project: Project[] }) => {
                     <Badge
                       key={tag._id}
                       variant="outline"
-                      className="border-blue-400/30 text-black/50"
+                      className="border-blue-400/30 "
                     >
                       <small>{tag.name}</small>
                     </Badge>

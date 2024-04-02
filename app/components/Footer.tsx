@@ -24,12 +24,14 @@ const Footer = () => {
       <div className="flex justify-center space-x-4">
         {socialLinks.map((link, idx) => (
           <Link key={idx} href={link.href} target="_blank">
-            {<link.icon className="h-6 w-6 text-black/40 dark:text-white/80" />}
+            {
+              <link.icon className="h-6 w-6" />
+            }
           </Link>
         ))}
       </div>
       <div>
-        <small className="text-black/40">
+        <small className="">
           Built using{" "}
           <Link
             href="https://nextjs.org/"

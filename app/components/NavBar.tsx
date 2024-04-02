@@ -31,7 +31,7 @@ const NavBar = () => {
           </h1>
         </Link>
 
-        <ul className="flex gap-4 tracking-wide text-black/50 dark:text-white/70">
+        <ul className="flex gap-4 tracking-wide text-secondary">
           {navLinks.map((link, idx) => (
             <li
               key={idx}
