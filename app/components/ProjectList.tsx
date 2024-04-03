@@ -13,11 +13,12 @@ const ProjectList = ({ project }: { project: Project[] }) => {
               key={idx}
               href={project.githubUrl}
               target="_blank"
-              className={`flex flex-col justify-end rounded-lg border border-gray-300 p-3 dark:border-gray-600 ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
+              className={`transition-transform duration-300 ease-linear hover:-translate-y-0.5 flex flex-col justify-end rounded-lg border border-gray-300 p-3 dark:border-gray-600 ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
             >
               <div className="space-y-3">
-                <h3 className="item-center flex font-semibold leading-none text-gray-600 dark:text-gray-300">
-                  {project.title} <ArrowUpRightIcon className="ml-2 h-4 w-4" />
+                <h3 className="flex items-center font-semibold leading-none text-gray-600 dark:text-gray-300">
+                  {project.title}{" "}
+                  <ArrowUpRightIcon className="ml-2 h-3.5 w-3.5" />
                 </h3>
                 <small className="line-clamp-2 text-gray-500 dark:text-gray-400">
                   {project.description}
