@@ -23,7 +23,7 @@ const AboutPage = async () => {
       </figure> */}
 
       <Heading className="mb-20">
-        About<span className="text-blue-400">.</span>
+        About<span className="text-[#8cbdf8]">.</span>
       </Heading>
 
       <article>

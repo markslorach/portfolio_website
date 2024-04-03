@@ -16,7 +16,7 @@ const BlogPage = async () => {
   return (
     <section>
      <Heading className="mb-20">
-        Blog<span className="text-blue-400">.</span>
+        Blog<span className="text-[#8cbdf8]">.</span>
       </Heading>
 
       {blogs.length > 0 ? (
