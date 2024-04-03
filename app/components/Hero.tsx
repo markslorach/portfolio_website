@@ -20,12 +20,12 @@ const Hero = () => {
           height={400}
           quality={75}
           priority
-          className="mb-2 h-20 w-20 rounded-lg"
+          className="mb-2 h-16 w-16 rounded-lg"
         />
       </figure>
 
-      <article className="flex flex-col space-y-8">
-        <h1 className="hero-heading">
+      <article className="flex flex-col space-y-6">
+        <h1 className="text-5xl font-extrabold">
           Hello! I&apos;m{" "}
           <span className="text-[#8cbdf8]">
             <Link href="/about">Mark</Link>
@@ -48,7 +48,7 @@ const Hero = () => {
               target="_blank"
               className="rounded-lg bg-slate-200/60 p-2 dark:bg-white/10"
             >
-              <link.icon className="h-6 w-6 text-black/70 dark:text-white/80" />
+              <link.icon className="h-6 w-6 " />
             </Link>
           ))}
         </div>

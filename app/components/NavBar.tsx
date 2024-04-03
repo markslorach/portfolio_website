@@ -38,7 +38,7 @@ const NavBar = () => {
               className={pathname === link.href ? "text-[#8cbdf8]" : ""}
             >
               <Link
-                className="hidden transition-colors hover:text-[#8cbdf8] sm:inline-flex"
+                className="hidden transition-colors text-gray-500 dark:text-gray-400 hover:text-[#8cbdf8] sm:inline-flex"
                 href={link.href}
               >
                 {link.label}

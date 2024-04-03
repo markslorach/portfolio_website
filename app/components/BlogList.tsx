@@ -32,7 +32,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                 <Link
                   href={`/blog/${post.slug.current}`}
                   key={post._id}
-                  className="projectCard"
+                  className="rounded-lg border border-gray-200 dark:border-gray-700 p-3"
                 >
                   <motion.div >
                    {/* {...animateCard}> */}
@@ -44,11 +44,11 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                         <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                       </div>
 
-                      <small className="mb-3.5 hidden text-xs leading-none sm:block">
+                      <small className="mb-3.5 hidden text-xs leading-none sm:block text-gray-500 dark:text-gray-400">
                         {formattedDate}
                       </small>
                     </div>
-                    <small className="leading-1 line-clamp-1">
+                    <small className="leading-1 line-clamp-1 text-gray-500 dark:text-gray-400">
                       {post.description}
                     </small>
                   </motion.div>
@@ -57,7 +57,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                 <Link
                   href={`/blog/${post.slug.current}`}
                   key={post._id}
-                  className="projectCard"
+                  className="rounded-lg border border-gray-200 dark:border-gray-700 p-3"
                 >
                   <div className="flex items-center justify-between">
                     <div className="mb-2 flex items-center">
@@ -71,7 +71,7 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                       {formattedDate}
                     </small>
                   </div>
-                  <small className="leading-1 line-clamp-1 text-black/50">
+                  <small className="leading-1 line-clamp-1 text-gray-500 dark:text-gray-400">
                     {post.description}
                   </small>
                 </Link>

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-50 text-black/80 dark:bg-slate-900 dark:text-white/80;
+  @apply bg-neutral-50 text-black/80 dark:bg-slate-900 dark:text-white/90 overflow-x-scroll;
 }
