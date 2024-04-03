@@ -53,7 +53,7 @@ export default async function Home() {
       <section>
         <div className="mb-8 flex justify-between">
           <h2 className="text-2xl font-bold leading-none">
-            Lastest <span className="text-[#8cbdf8]">Posts</span>
+            Latest <span className="text-[#8cbdf8]">Posts</span>
           </h2>
           <Link
             className="hidden flex-col justify-end font-medium underline decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:inline-flex"
