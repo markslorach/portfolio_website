@@ -4,6 +4,9 @@ import Link from "next/link";
 // Icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
+// Components
+import Heading from "./Heading";
+
 export const socialLinks = [
   { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/markslorach/" },
   { icon: FaGithub, href: "https://github.com/markslorach" },
@@ -25,13 +28,13 @@ const Hero = () => {
       </figure>
 
       <article className="flex flex-col space-y-6">
-        <h1 className="text-5xl font-extrabold">
+        <Heading>
           Hello! I&apos;m{" "}
           <span className="text-[#8cbdf8]">
             <Link href="/about">Mark</Link>
           </span>
           .
-        </h1>
+        </Heading>
 
         <p className="line-clamp-3 w-full text-balance leading-relaxed tracking-[0.015rem] text-gray-500 dark:text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
@@ -48,7 +51,7 @@ const Hero = () => {
               target="_blank"
               className="rounded-lg bg-slate-200/60 p-2 dark:bg-white/10"
             >
-              <link.icon className="h-6 w-6 " />
+              <link.icon className="h-6 w-6" />
             </Link>
           ))}
         </div>

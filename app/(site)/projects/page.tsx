@@ -5,16 +5,16 @@ import { Project } from "@/app/utils/interface";
 
 // Components
 import ProjectList from "../../components/ProjectList";
+import Heading from "@/app/components/Heading";
 
 const ProjectsPage = async () => {
   const projects: Project[] = await getProjects();
 
   return (
     <section>
-       <h1 className="hero-heading mb-20">
-          Projects
-          <span className="text-blue-400">.</span>
-        </h1>
+      <Heading className="mb-20">
+        Projects<span className="text-blue-400">.</span>
+      </Heading>
       
       {projects.length > 0 ? (
         <ProjectList project={projects} />

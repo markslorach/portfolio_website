@@ -74,7 +74,7 @@ export default async function Home() {
         )}
         {blogs.length > 0 && (
           <Link
-            className="font-medium text-black/70 underline decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:hidden"
+            className="font-medium underline decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:hidden"
             href="/blog#top"
           >
             View all posts

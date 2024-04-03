@@ -5,6 +5,7 @@ import { BlogPost } from "@/app/utils/interface";
 
 // Components
 import BlogList from "@/app/components/BlogList";
+import Heading from "@/app/components/Heading";
 
 export const revalidate = 0;
 
@@ -14,10 +15,9 @@ const BlogPage = async () => {
 
   return (
     <section>
-      <h1 className="hero-heading mb-20">
-          Blog
-          <span className="text-blue-400">.</span>
-        </h1>
+     <Heading className="mb-20">
+        Blog<span className="text-blue-400">.</span>
+      </Heading>
 
       {blogs.length > 0 ? (
         <BlogList blogs={blogs.slice(0, 4)} />

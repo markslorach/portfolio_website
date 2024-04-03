@@ -1,3 +1,4 @@
+import Heading from "@/app/components/Heading";
 import { getAboutInfo } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
 // import glencoe from "@/public/images/Glencoe.jpeg";
@@ -21,10 +22,9 @@ const AboutPage = async () => {
         ></Image>
       </figure> */}
 
-      <h1 className="hero-heading mb-20">
-        About
-        <span className="text-blue-400">.</span>
-      </h1>
+      <Heading className="mb-20">
+        About<span className="text-blue-400">.</span>
+      </Heading>
 
       <article>
         {about.map((data: any, idx: any) => (

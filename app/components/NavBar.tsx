@@ -20,6 +20,7 @@ export const navLinks: NavLinks[] = [
 
 const NavBar = () => {
   const pathname = usePathname();
+  console.log(pathname)
 
   return (
     <nav className="mx-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
@@ -31,14 +32,14 @@ const NavBar = () => {
           </h1>
         </Link>
 
-        <ul className="flex gap-4 tracking-wide text-secondary">
+        <ul className="text-secondary flex gap-4 tracking-wide">
           {navLinks.map((link, idx) => (
             <li
               key={idx}
-              className={pathname === link.href ? "text-[#8cbdf8]" : ""}
+              className={pathname === link.href ? "text-[#8cbdf8]" : "text-gray-500, dark:text-gray-400"}
             >
               <Link
-                className="hidden transition-colors text-gray-500 dark:text-gray-400 hover:text-[#8cbdf8] sm:inline-flex"
+                className="hidden transition-colors hover:text-[#8cbdf8] sm:inline-flex"
                 href={link.href}
               >
                 {link.label}
