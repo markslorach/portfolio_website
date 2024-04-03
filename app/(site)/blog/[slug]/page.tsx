@@ -13,9 +13,10 @@ import { BlogPost } from "@/app/utils/interface";
 import { PortableTextComponent } from "@/app/components/PortableTextComponent";
 import Heading from "@/app/components/Heading";
 import { Badge } from "@/components/ui/badge";
+import BackToTop from "@/app/components/BackToTop";
 
 // Icons
-import { CalendarDaysIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 
 interface Props {
   params: {
@@ -31,7 +32,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
   if (!post) notFound();
 
   return (
-    <section className="-mb-6">
+    <section>
       <section className="flex flex-col space-y-8 rounded-lg border border-gray-300 p-6 dark:border-gray-600">
         <Heading>{post.title}</Heading>
 
@@ -73,6 +74,8 @@ const BlogPage = async ({ params: { slug } }: Props) => {
       <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400">
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
+
+      <BackToTop/>
     </section>
   );
 };
