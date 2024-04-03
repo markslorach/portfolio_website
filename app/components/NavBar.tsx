@@ -20,7 +20,6 @@ export const navLinks: NavLinks[] = [
 
 const NavBar = () => {
   const pathname = usePathname();
-  console.log(pathname)
 
   return (
     <nav className="mx-auto flex h-24 max-w-2xl items-center justify-between px-4 md:px-0">
@@ -36,7 +35,7 @@ const NavBar = () => {
           {navLinks.map((link, idx) => (
             <li
               key={idx}
-              className={pathname === link.href ? "text-[#8cbdf8]" : "text-gray-500, dark:text-gray-400"}
+              className={pathname === link.href ? "text-[#8cbdf8]" : "text-gray-500 dark:text-gray-400"}
             >
               <Link
                 className="hidden transition-colors hover:text-[#8cbdf8] sm:inline-flex"

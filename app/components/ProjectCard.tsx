@@ -1,7 +1,11 @@
-import { Badge } from "@/components/ui/badge";
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+
+// Interface
 import { Project } from "../utils/interface";
+
+//Icons
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 const ProjectCard = ({ project, idx }: { project: Project; idx: number }) => {
   return (
