@@ -7,13 +7,13 @@ import { navLinks } from "./NavBar";
 
 const Footer = () => {
   return (
-    <div className="space-y-8 border-t border-black/10 py-8 text-center dark:border-white/70">
+    <div className="space-y-8 border-t border-gray-300 py-8 text-center dark:border-gray-600">
       <ul className="flex justify-center space-x-4 tracking-wide">
         {navLinks.map((link, idx) => (
           <li key={idx}>
             <Link
               href={link.href}
-              className="transition-colors hover:text-blue-400"
+              className="text-gray-500 transition-colors hover:text-[#8cbdf8] dark:text-gray-400 dark:hover:text-[#8cbdf8]"
             >
               {link.label}
             </Link>
@@ -25,13 +25,13 @@ const Footer = () => {
         {socialLinks.map((link, idx) => (
           <Link key={idx} href={link.href} target="_blank">
             {
-              <link.icon className="h-6 w-6" />
+              <link.icon className="h-6 w-6 text-gray-500 transition-colors hover:text-[#8cbdf8] dark:text-gray-400 dark:hover:text-[#8cbdf8]" />
             }
           </Link>
         ))}
       </div>
       <div>
-        <small className="">
+        <small className="text-gray-400 dark:text-gray-500">
           Built using{" "}
           <Link
             href="https://nextjs.org/"

@@ -33,7 +33,7 @@ const Hero = () => {
           .
         </h1>
 
-        <p className="line-clamp-3 w-full text-balance leading-relaxed tracking-[0.015rem] text-black/70 dark:text-white/70">
+        <p className="line-clamp-3 w-full text-balance leading-relaxed tracking-[0.015rem] text-gray-500 dark:text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
           lectus nisi. Sed sit amet tincidunt purus. Fusce molestie dui
           ullamcorper nulla facilisis ornare. In in facilisis lorem. Vivamus

@@ -32,13 +32,13 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                 <Link
                   href={`/blog/${post.slug.current}`}
                   key={post._id}
-                  className="rounded-lg border border-gray-200 dark:border-gray-700 p-3"
+                  className="rounded-lg border border-gray-300 dark:border-gray-600 p-3"
                 >
                   <motion.div >
                    {/* {...animateCard}> */}
                     <div className="flex items-center justify-between">
                       <div className="mb-2 flex items-center">
-                        <h2 className="leading-1 line-clamp-1 font-semibold">
+                        <h2 className="leading-1 line-clamp-1 font-semibold text-gray-600 dark:text-gray-300">
                           {post.title}
                         </h2>
                         <ArrowUpRightIcon className="ml-2 h-4 w-4" />
@@ -57,13 +57,13 @@ const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
                 <Link
                   href={`/blog/${post.slug.current}`}
                   key={post._id}
-                  className="rounded-lg border border-gray-200 dark:border-gray-700 p-3"
+                  className="rounded-lg border border-gray-300 dark:border-gray-600 p-3"
                 >
                   <div className="flex items-center justify-between">
                     <div className="mb-2 flex items-center">
-                      <h2 className="leading-1 line-clamp-1 font-semibold">
+                      <h3 className="leading-1 line-clamp-1 font-semibold text-gray-600 dark:text-gray-300">
                         {post.title}
-                      </h2>
+                      </h3>
                       <ArrowUpRightIcon className="ml-2 h-4 w-4" />
                     </div>
 
