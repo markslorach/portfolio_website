@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getPostsByTag } from "@/lib/fetchData";
 
 //Interface
@@ -6,7 +5,7 @@ import { BlogPost } from "@/app/utils/interface";
 
 // Components
 import BlogList from "@/app/components/BlogList";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import Heading from "@/app/components/Heading";
 
 interface Props {
   params: {
@@ -22,17 +21,8 @@ const TagPage = async ({ params: { slug } }: Props) => {
   return (
     <section>
       <div className="mb-20 flex flex-col space-y-8">
-        <Link
-          className="flex items-center font-medium text-black/70 underline decoration-blue-400 decoration-2 underline-offset-2"
-          href="/blog"
-        >
-          <ArrowLeftIcon className="mr-1 h-4 w-4" />
-          Back to posts
-        </Link>
-        <h1 className="hero-heading">
-          <span className="text-blue-400">#</span>
-          {slug}
-        </h1>
+     
+      <Heading><span className="text-[#8cbdf8]">#</span>{slug}</Heading>
       </div>
 
       {blogs.length > 0 ? (

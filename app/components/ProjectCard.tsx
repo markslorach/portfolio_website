@@ -27,7 +27,7 @@ const ProjectCard = ({ project, idx }: { project: Project; idx: number }) => {
             <Badge
               key={tag._id}
               variant="outline"
-              className="border-gray-200 text-gray-400 dark:border-gray-700 dark:text-gray-400"
+              className="border-gray-300 text-gray-500 dark:border-gray-700 dark:text-gray-400"
             >
               <small>{tag.name}</small>
             </Badge>

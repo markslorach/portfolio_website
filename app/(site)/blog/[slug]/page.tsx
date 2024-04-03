@@ -6,13 +6,16 @@ import { getBlogArticle } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 
+// Interface
+import { BlogPost } from "@/app/utils/interface";
+
 // Components
 import { PortableTextComponent } from "@/app/components/PortableTextComponent";
+import Heading from "@/app/components/Heading";
+import { Badge } from "@/components/ui/badge";
 
 // Icons
 import { CalendarDaysIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
-import { BlogPost } from "@/app/utils/interface";
-import { Badge } from "@/components/ui/badge";
 
 interface Props {
   params: {
@@ -24,37 +27,35 @@ export const revalidate = 0;
 
 const BlogPage = async ({ params: { slug } }: Props) => {
   const post: BlogPost = await getBlogArticle(slug);
-  console.log(post);
 
   if (!post) notFound();
 
   return (
     <section className="-mb-6">
-      <div className="flex flex-col space-y-8">
-        <Link
-          className="flex items-center font-medium underline decoration-blue-400 decoration-2 underline-offset-2"
-          href="/blog"
-        >
-          <ArrowLeftIcon className="mr-1 h-4 w-4" />
-          Back to posts
-        </Link>
-        <h1 className="hero-heading text-wrap">{post.title}</h1>
+      <section className="flex flex-col space-y-8 rounded-lg border border-gray-300 p-6 dark:border-gray-600">
+        <Heading>{post.title}</Heading>
 
         <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
-          <small className="flex items-center leading-none font-medium">
-            <CalendarDaysIcon className="mb-0.5 mr-1 h-4 w-4" /> Published -{" "}
+          <small className="flex items-center font-medium leading-none text-gray-500 dark:text-gray-400">
+            <CalendarDaysIcon className="mb-0.5 mr-1 h-5 w-5" />
             {formatDate(post.createdAt)}
           </small>
 
           <div className="flex items-center space-x-2">
             {post.tags.map((tag) => (
-              <Badge className="border-blue-400/30" variant="outline" key={tag._id}>
-                <Link href={`/tags/${tag.slug.current}#top`}>{`#${tag.name}`}</Link>
+              <Badge
+                className="border-gray-300 text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                variant="outline"
+                key={tag._id}
+              >
+                <Link
+                  href={`/tags/${tag.slug.current}#top`}
+                >{`#${tag.name.toLowerCase()}`}</Link>
               </Badge>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {post.titleImage && (
         <figure>
