@@ -31,6 +31,7 @@ const config = {
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
     "prettier-plugin-tailwindcss",
+    "tailwind-scrollbar",
   ],
 } satisfies Config;
 
