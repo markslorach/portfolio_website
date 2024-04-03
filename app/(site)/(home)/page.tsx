@@ -42,7 +42,7 @@ export default async function Home() {
 
         <div className="mb-20">
           <Link
-            className="font-medium underline decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:hidden"
+            className="font-medium underline flex justify-end decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:hidden"
             href="/projects#top"
           >
             View all projects
@@ -72,7 +72,7 @@ export default async function Home() {
         )}
         {blogs.length > 0 && (
           <Link
-            className="font-medium underline decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:hidden"
+            className="font-medium flex justify-end underline decoration-[#8cbdf8] decoration-2 underline-offset-[2.3px] sm:hidden"
             href="/blog#top"
           >
             View all posts
