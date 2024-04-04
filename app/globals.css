@@ -5,3 +5,7 @@
 body {
   @apply overflow-y-scroll bg-neutral-50 text-black/80 dark:bg-slate-900 dark:text-white/90;
 }
+
+code {
+  @apply bg-gray-200 dark:bg-gray-700
+}
