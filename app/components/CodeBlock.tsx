@@ -6,9 +6,9 @@ const CodeBlock = ({ language, children }: any) => {
 
   return (
     <div className="highlight">
-      <pre className={`language-${language} bg-slate-800`}>
+      <pre className={`language-${language} bg-slate-800 dark:bg-slate-800`}>
         <code
-          className={`language-${language}`}
+          className={`language-${language} bg-transparent dark:bg-transparent`}
           dangerouslySetInnerHTML={{ __html: highlightedCode }}
         />
       </pre>
