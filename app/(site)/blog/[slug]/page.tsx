@@ -13,7 +13,6 @@ import { BlogPost } from "@/app/utils/interface";
 import { PortableTextComponent } from "@/app/components/PortableTextComponent";
 import Heading from "@/app/components/Heading";
 import { Badge } from "@/components/ui/badge";
-import BackToTop from "@/app/components/BackToTop";
 
 // Icons
 import { CalendarDaysIcon } from "@heroicons/react/24/solid";
