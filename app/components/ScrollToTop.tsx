@@ -17,7 +17,7 @@ export default function ScrollToTop() {
         onClick={scrollToTop}
         className="rounded-lg bg-slate-200/60 p-2 transition-colors hover:bg-slate-200/80 dark:bg-white/10 hover:dark:bg-white/20"
       >
-        <ChevronUpIcon className="h-5 w-5" />
+        <ChevronUpIcon className="h-7 w-7 sm:h-5 sm:w-5 " />
       </button>
     </div>
   );
