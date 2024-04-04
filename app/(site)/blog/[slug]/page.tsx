@@ -75,7 +75,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
 
-      <BackToTop/>
+      <BackToTop />
     </section>
   );
 };

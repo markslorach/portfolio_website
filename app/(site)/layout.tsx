@@ -8,7 +8,7 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex min-h-screen flex-col">
+    <section className="flex min-h-[100vh] flex-col">
       <header>
         <NavBar />
       </header>

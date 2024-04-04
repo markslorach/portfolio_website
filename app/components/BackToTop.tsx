@@ -3,8 +3,11 @@ import Link from "next/link";
 
 const BackToTop = () => {
   return (
-    <div className="flex justify-end mt-16">
-      <Link href="#top" className="rounded-lg p-2 bg-slate-200/60 dark:bg-white/10 hover:bg-slate-200/80 hover:dark:bg-white/20 transition-colors">
+    <div className="mt-12 flex justify-end">
+      <Link
+        href="#top"
+        className="rounded-lg bg-slate-200/60 p-2 transition-colors hover:bg-slate-200/80 dark:bg-white/10 hover:dark:bg-white/20"
+      >
         <ChevronUpIcon className="h-5 w-5" />
       </Link>
     </div>

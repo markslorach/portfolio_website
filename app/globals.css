@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-scroll scroll-smooth bg-neutral-50 text-black/80 dark:bg-slate-900 dark:text-white/90;
+  @apply overflow-y-scroll bg-neutral-50 text-black/80 dark:bg-slate-900 dark:text-white/90;
 }
