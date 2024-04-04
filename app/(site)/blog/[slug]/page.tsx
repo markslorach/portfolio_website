@@ -17,6 +17,7 @@ import BackToTop from "@/app/components/BackToTop";
 
 // Icons
 import { CalendarDaysIcon } from "@heroicons/react/24/solid";
+import ScrollToTop from "@/app/components/ScrollToTop";
 
 interface Props {
   params: {
@@ -75,7 +76,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
 
-      <BackToTop />
+      <ScrollToTop/>
     </section>
   );
 };
