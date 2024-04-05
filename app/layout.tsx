@@ -3,13 +3,14 @@ import { Inter, Lato } from "next/font/google";
 
 import "./globals.css";
 import Providers from "./providers";
+import { Toaster } from "@/components/ui/toaster";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 const lato = Lato({
-  weight: ["100", "300", '400', "700", "900"],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Mark Slorach",
@@ -24,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={lato.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
+          <Toaster />
       </body>
     </html>
   );
