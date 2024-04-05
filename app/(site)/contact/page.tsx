@@ -1,3 +1,5 @@
+// Components
+import ContactForm from "@/app/components/ContactForm";
 import Heading from "@/app/components/Heading";
 
 const ContactPage = () => {
@@ -6,6 +8,8 @@ const ContactPage = () => {
       <Heading className="mb-20">
         Contact<span className="text-[#8cbdf8]">.</span>
       </Heading>
+
+      <ContactForm />
     </section>
   );
 };
