@@ -4,12 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
+// Server actions
+import { sendEmail } from "../actions/sendEmail";
+
 const ContactForm = () => {
   return (
-    <form className="space-y-4" action={(formData) => {
-        console.log(formData.get("name"))
-        console.log(formData.get("email"))
-        console.log(formData.get("message"))
+    <form className="space-y-4" action={ async (formData) => {
+        await sendEmail(formData)
     }}>
       <div className="space-y-1">
         <Label>Name</Label>
