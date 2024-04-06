@@ -6,9 +6,12 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 
+// Components
+import FormSubmitButton from "./FormSubmitButton";
+
 // Server actions
 import { sendEmail } from "../actions/sendEmail";
-import FormSubmitButton from "./FormSubmitButton";
+
 
 const ContactForm = () => {
   const { toast } = useToast();
