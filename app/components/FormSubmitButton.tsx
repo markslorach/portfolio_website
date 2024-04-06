@@ -11,7 +11,7 @@ const FormSubmitButton = () => {
     <Button
       disabled={pending}
       variant="outline"
-      className="w-full bg-transparent font-bold dark:bg-transparent"
+      className="w-full bg-transparent font-bold dark:bg-transparent border-gray-300 dark:border-gray-600"
       type="submit"
     >
       Send
