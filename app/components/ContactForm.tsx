@@ -16,7 +16,7 @@ const ContactForm = () => {
 
   return (
     <form
-      className="space-y-4 rounded-lg border p-5 border-gray-300 dark:border-gray-600"
+      className="space-y-4 rounded-lg border border-gray-300 p-5 dark:border-gray-600"
       action={async (formData) => {
         await sendEmail(formData);
         toast({
@@ -30,7 +30,7 @@ const ContactForm = () => {
         <div className="space-y-1">
           <Label className="font-semibold">Name</Label>
           <Input
-            className="bg-transparent dark:bg-transparent border-gray-300 dark:border-gray-600"
+            className="border-gray-300 bg-transparent dark:border-gray-600 dark:bg-transparent"
             name="name"
             required
             placeholder="Name"
@@ -39,7 +39,7 @@ const ContactForm = () => {
         <div className="space-y-1">
           <Label className="font-semibold">Email</Label>
           <Input
-            className="bg-transparent dark:bg-transparent border-gray-300 dark:border-gray-600"
+            className="border-gray-300 bg-transparent dark:border-gray-600 dark:bg-transparent"
             name="email"
             required
             placeholder="Email"
@@ -50,7 +50,7 @@ const ContactForm = () => {
       <div className="space-y-1">
         <Label className="font-semibold">Message</Label>
         <Textarea
-          className="h-44 bg-transparent dark:bg-transparent border-gray-300 dark:border-gray-600"
+          className="max-h-96 min-h-44 border-gray-300 bg-transparent dark:border-gray-600 dark:bg-transparent"
           name="message"
           required
           placeholder="Message"
