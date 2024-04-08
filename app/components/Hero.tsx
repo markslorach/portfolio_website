@@ -36,7 +36,7 @@ const Hero = () => {
           .
         </Heading>
 
-        <p className="text-3xl font-bold w-full tracking-[0.015rem] text-gray-500 dark:text-gray-400">
+        <p className="text-3xl font-bold sm:text-balance w-full tracking-[0.015rem] text-gray-500 dark:text-gray-400">
         A full-stack JavaScript focused developer based in Scotland, specialising in creating fast, responsive, and user-friendly applications.
         </p>
 
