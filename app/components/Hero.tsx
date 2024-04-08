@@ -36,10 +36,8 @@ const Hero = () => {
           .
         </Heading>
 
-        <p className="w-full text-wrap text-2xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
-          A full-stack JavaScript focused developer based in Scotland,
-          specialising in creating fast, responsive, and user-friendly
-          applications.
+        <p className="w-full text-pretty text-2xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
+          A Scotland-based full-stack developer focused on modern JavaScript development. I specialise in creating fast, responsive, and user-friendly applications.
         </p>
 
         <div className="flex space-x-2 pt-1">
