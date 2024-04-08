@@ -36,11 +36,8 @@ const Hero = () => {
           .
         </Heading>
 
-        <p className="line-clamp-3 w-full text-balance leading-relaxed tracking-[0.015rem] text-gray-500 dark:text-gray-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
-          lectus nisi. Sed sit amet tincidunt purus. Fusce molestie dui
-          ullamcorper nulla facilisis ornare. In in facilisis lorem. Vivamus
-          mattis, tellus ac molestie mollis, est magna vestibulum ante.
+        <p className="text-3xl font-bold w-full tracking-[0.015rem] text-gray-500 dark:text-gray-400">
+        A full-stack JavaScript focused developer based in Scotland, specialising in creating fast, responsive, and user-friendly applications.
         </p>
 
         <div className="flex space-x-2 pt-1">

@@ -1,9 +1,11 @@
-import Heading from "@/app/components/Heading";
 import { getAboutInfo } from "@/lib/fetchData";
 import { PortableText } from "@portabletext/react";
 // import glencoe from "@/public/images/Glencoe.jpeg";
 // import Image from "next/image";
 
+// Components
+import Heading from "@/app/components/Heading";
+import Experience from "@/app/components/Experience";
 export const revalidate = 0; // remove once website is complete
 
 const AboutPage = async () => {
@@ -36,6 +38,10 @@ const AboutPage = async () => {
           </div>
         ))}
       </article>
+      <h2 className="text-2xl font-bold leading-none">
+        Recent <span className="text-[#8cbdf8]">Experience</span>
+      </h2>
+      <Experience />
     </section>
   );
 };

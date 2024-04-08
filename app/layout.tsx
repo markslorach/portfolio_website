@@ -1,4 +1,3 @@
-import Head from "next/head";
 import type { Metadata } from "next";
 import { Inter, Lato } from "next/font/google";
 
@@ -25,12 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no"
-        />
-      </Head>
       <body className={lato.className}>
         <Providers>{children}</Providers>
         <Toaster />
