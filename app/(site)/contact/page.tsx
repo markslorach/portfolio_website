@@ -6,7 +6,7 @@ const ContactPage = () => {
   return (
     <section>
       <Heading className="mb-20">
-        Contact<span className="text-[#8cbdf8]">.</span>
+        Contact<span className="dark:text-[#8cbdf8] text-blue-400">.</span>
       </Heading>
 
       <ContactForm />

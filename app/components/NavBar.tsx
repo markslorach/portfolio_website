@@ -28,7 +28,7 @@ const NavBar = () => {
     >
       <div className="flex items-center space-x-12">
         <Link href="/">
-          <h1 className="text-xl font-bold tracking-wide text-[#8cbdf8]">
+          <h1 className="text-xl font-bold tracking-wide text-blue-400 dark:text-[#8cbdf8]">
             mark
             <span className="text-gray-500 dark:text-white/90">slorach</span>.
           </h1>
@@ -45,7 +45,7 @@ const NavBar = () => {
               }
             >
               <Link
-                className="hidden transition-colors hover:text-[#8cbdf8] sm:inline-flex"
+                className="hidden transition-colors hover:text-blue-400 dark:hover:text-[#8cbdf8] sm:inline-flex"
                 href={link.href}
               >
                 {link.label}

@@ -24,7 +24,7 @@ const TagPage = async ({ params: { slug } }: Props) => {
       <BackToButton href="/blog" text="Back to blogs" />
       <div className="mb-20 flex flex-col space-y-8">
      
-      <Heading><span className="text-[#8cbdf8]">#</span>{slug}</Heading>
+      <Heading><span className="dark:text-[#8cbdf8] text-blue-400">#</span>{slug}</Heading>
       </div>
 
       {blogs.length > 0 ? (

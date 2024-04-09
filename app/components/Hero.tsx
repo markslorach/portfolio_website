@@ -30,14 +30,16 @@ const Hero = () => {
       <article className="flex flex-col space-y-6">
         <Heading>
           Hello! I&apos;m{" "}
-          <span className="text-[#8cbdf8]">
+          <span className="dark:text-[#8cbdf8] text-blue-400">
             <Link href="/about">Mark</Link>
           </span>
           .
         </Heading>
 
         <p className="w-full text-pretty text-2xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
-          A Scotland-based full-stack developer focused on modern JavaScript development. I specialise in creating fast, responsive, and user-friendly applications.
+          A Scotland-based full-stack developer focused on modern JavaScript
+          development. I specialise in creating fast, responsive, and
+          user-friendly applications.
         </p>
 
         <div className="flex space-x-2 pt-1">

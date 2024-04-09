@@ -13,7 +13,7 @@ const ProjectsPage = async () => {
   return (
     <section>
       <Heading className="mb-20">
-        Projects<span className="text-[#8cbdf8]">.</span>
+        Projects<span className="dark:text-[#8cbdf8] text-blue-400">.</span>
       </Heading>
       
       {projects.length > 0 ? (

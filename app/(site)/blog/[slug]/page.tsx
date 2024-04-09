@@ -74,7 +74,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         </figure>
       )}
 
-      <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-[#8cbdf8]">
+      <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400 dark:prose-li:marker:text-[#8cbdf8]">
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
 

@@ -25,7 +25,7 @@ const AboutPage = async () => {
       </figure> */}
 
       <Heading className="mb-20">
-        About<span className="text-[#8cbdf8]">.</span>
+        About<span className="dark:text-[#8cbdf8] text-blue-400">.</span>
       </Heading>
 
       <article>
@@ -38,7 +38,7 @@ const AboutPage = async () => {
           </div>
         ))}
       </article>
-      <h2 className="text-2xl font-bold leading-none">
+      <h2 className="text-2xl font-bold leading-none mb-8">
         Recent <span className="text-[#8cbdf8]">Experience</span>
       </h2>
       <Experience />

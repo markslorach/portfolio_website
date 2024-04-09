@@ -13,7 +13,7 @@ const Footer = () => {
           <li key={idx}>
             <Link
               href={link.href}
-              className="text-gray-500 transition-colors hover:text-[#8cbdf8] dark:text-gray-400 dark:hover:text-[#8cbdf8]"
+              className="text-gray-500 transition-colors hover:text-blue-400 dark:text-gray-400 dark:hover:text-[#8cbdf8]"
             >
               {link.label}
             </Link>
@@ -25,7 +25,7 @@ const Footer = () => {
         {socialLinks.map((link, idx) => (
           <Link key={idx} href={link.href} target="_blank">
             {
-              <link.icon className="h-6 w-6 text-gray-500 transition-colors hover:text-[#8cbdf8] dark:text-gray-400 dark:hover:text-[#8cbdf8]" />
+              <link.icon className="h-6 w-6 text-gray-500 transition-colors hover:text-blue-400 dark:text-gray-400 dark:hover:text-[#8cbdf8]" />
             }
           </Link>
         ))}
