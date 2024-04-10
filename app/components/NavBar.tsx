@@ -40,7 +40,7 @@ const NavBar = () => {
               key={idx}
               className={
                 pathname === link.href
-                  ? "text-[#8cbdf8]"
+                  ? "text-blue-400 dark:text-[#8cbdf8]"
                   : "text-gray-500 dark:text-gray-400"
               }
             >
