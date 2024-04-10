@@ -1,3 +1,5 @@
+import { Toaster } from "react-hot-toast";
+
 // Components
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -18,6 +20,7 @@ export default function SiteLayout({
       <footer className="mx-auto w-full max-w-2xl px-4 pt-28 md:px-0">
         <Footer />
       </footer>
+      <Toaster position="top-right" />
     </section>
   );
 }

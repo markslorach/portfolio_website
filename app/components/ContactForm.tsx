@@ -3,25 +3,21 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
 
 // Components
 import FormSubmitButton from "./FormSubmitButton";
 
 // Server actions
 import { sendEmail } from "../actions/sendEmail";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
-  const { toast } = useToast();
-
   return (
     <form
       className="space-y-4 rounded-lg border border-gray-300 p-5 dark:border-gray-600"
       action={async (formData) => {
         await sendEmail(formData);
-        toast({
-          description: "Your message has been sent successfully.",
-        });
+        toast.success("Message sent successfully!");
         const form = document.querySelector("form");
         form ? form.reset() : null;
       }}
