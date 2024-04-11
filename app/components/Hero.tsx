@@ -38,10 +38,7 @@ const Hero = () => {
         <div className="space-y-6">
           <Heading>
             Hello! I&apos;m{" "}
-            <span className="bg-gradient-to-r from-blue-400 dark:from-[#8cbdf8] to-indigo-400 dark:to-indigo-400 bg-clip-text text-transparent">
-              Mark
-            </span>
-            .
+            <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
           </Heading>
 
           <p className="w-full text-xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
@@ -54,9 +51,7 @@ const Hero = () => {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1" className="mb-2 border-none">
             <AccordionTrigger className="text-lg font-bold hover:no-underline">
-              <p className="">
-                Read more
-              </p>
+              Read more
             </AccordionTrigger>
             <AccordionContent>
               <About />
