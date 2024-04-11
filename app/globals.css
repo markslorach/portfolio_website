@@ -11,7 +11,7 @@ code {
 }
 
 .bio-link {
-  @apply text-blue-400 dark:text-[#8cbdf8] no-underline;
+  @apply text-blue-400 no-underline dark:text-[#8cbdf8] font-semibold;
 }
 
 .bio-highlight {
