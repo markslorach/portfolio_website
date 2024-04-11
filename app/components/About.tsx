@@ -4,7 +4,7 @@ const About = async () => {
 
   return (
     <section>
-      <article className="prose min-w-full prose-invert text-pretty tracking-wide">
+      <article className="prose min-w-full dark:prose-invert text-pretty tracking-wide">
         <p>In 2023, my love for tech and curiosity about how applications are built led me to transition from a career as a videographer and drone operator to completing CodeClan&apos;s Professional Software Development Bootcamp. I gained a strong foundation in building <Link href="/projects" className="bio-link">full-stack applications</Link> with <span className="bio-highlight">JavaScript</span>, Python and Java, including working with Frameworks, Object-Oriented Programming <span className="bio-highlight">OOP</span>, Test-Driven Development <span className="bio-highlight">TDD</span>, databases (<span className="bio-highlight">PostgreSQL</span>, MongoDB), version control, and agile methodologies.</p>
 
         <p>Since CodeClan, I&apos;ve focused my efforts on modern JavaScript development, diving deeper into <span className="bio-highlight">TypeScript</span> with <span className="bio-highlight">React</span> and <span className="bio-highlight">Next.js</span>. I&apos;m also exploring content management systems and tools like Prisma ORM to streamline database management in my personal projects - because who <i>really</i> wants to write raw SQL queries? Besides my own personal projects, I volunteer for the <Link href="https://www.scottishtecharmy.org/" target="_blank" className="bio-link">Scottish Tech Army</Link> as a web developer, which has been extremely rewarding.</p>
