@@ -1,11 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 // Icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 // Components
 import Heading from "./Heading";
+import About from "./About";
 
 export const socialLinks = [
   { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/markslorach/" },
@@ -30,17 +37,28 @@ const Hero = () => {
       <article className="flex flex-col space-y-6">
         <Heading>
           Hello! I&apos;m{" "}
-          <span className="dark:text-[#8cbdf8] text-blue-400">
+          <span className="text-blue-400 dark:text-[#8cbdf8]">
             <Link href="/about">Mark</Link>
           </span>
           .
         </Heading>
 
-        <p className="w-full  text-xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
+        <p className="w-full text-xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
           A Scotland-based full-stack developer focused on modern JavaScript
           development. I specialise in creating fast, responsive, and
           user-friendly applications.
         </p>
+
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1" className="border-none">
+            <AccordionTrigger className="text-lg font-bold hover:no-underline ">
+              Read more
+            </AccordionTrigger>
+            <AccordionContent>
+              <About/>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         <div className="flex space-x-2 pt-1">
           {socialLinks.map((link, idx) => (
