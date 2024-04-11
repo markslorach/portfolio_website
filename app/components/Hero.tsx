@@ -34,7 +34,9 @@ const Hero = () => {
         />
       </figure>
 
-      <article className="flex flex-col space-y-6">
+      <article className="flex flex-col">
+        <div className="space-y-6">
+
         <Heading>
           Hello! I&apos;m{" "}
           <span className="text-blue-400 dark:text-[#8cbdf8]">
@@ -48,10 +50,11 @@ const Hero = () => {
           development. I specialise in creating fast, responsive, and
           user-friendly applications.
         </p>
+        </div>
 
         <Accordion type="single" collapsible>
-          <AccordionItem value="item-1" className="border-none">
-            <AccordionTrigger className="text-lg font-bold hover:no-underline ">
+          <AccordionItem value="item-1" className="border-none mb-2">
+            <AccordionTrigger className="text-lg font-bold hover:no-underline text-gray-500 dark:text-gray-400 dark:hover:text-white/80 hover:text-black/80">
               Read more
             </AccordionTrigger>
             <AccordionContent>
