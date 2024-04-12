@@ -49,7 +49,7 @@ const Hero = () => {
         </div>
 
         <Accordion type="single" collapsible>
-          <AccordionItem value="item-1" className="mb-2 border-none">
+          <AccordionItem value="item-1" className="my-2 border-none">
             <AccordionTrigger className="text-lg font-bold hover:no-underline">
               Read more
             </AccordionTrigger>
