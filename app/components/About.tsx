@@ -14,8 +14,8 @@ const About = async () => {
           <span className="bio-highlight">PostgreSQL</span> and{" "}
           <span className="bio-highlight">MongoDB</span>, version control, and
           agile methodologies. I also gained experience with Object-Oriented
-          Programming <span className="bio-highlight">OOP</span>, Test-Driven
-          Development <span className="bio-highlight">TDD</span> and worked with{" "}
+          Programming, Test-Driven
+          Development and worked with{" "}
           <span className="bio-highlight">Node.js</span> and{" "}
           <span className="bio-highlight">Express</span> for API development.
         </p>
@@ -25,7 +25,7 @@ const About = async () => {
           <span className="bio-highlight">React</span> and utilising the
           server-side capabilities and routing within{" "}
           <span className="bio-highlight">Next.js</span>. I am a big fan of
-          Tailwind CSS and use libraries such as Shadcn/ui to streamline my
+          Tailwind CSS and use libraries such as Shadcn/ui to improve my design
           workflow. I have also been exploring content management systems and
           using tools like Prisma ORM to make my personal projects more
           efficient. Currently, I am volunteering as a web developer for the{" "}
