@@ -35,22 +35,20 @@ const Hero = () => {
       </figure>
 
       <article className="flex flex-col">
-        <div className="space-y-6">
-          <Heading>
+
+          <Heading className="mb-4">
             Hello! I&apos;m{" "}
             <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
           </Heading>
+          <h2 className="w-full mb-4 text-pretty text-2xl font-bold tracking-[0.015rem] text-gray-600 dark:text-gray-300">
+            {" "}
+            A Scotland-based full-stack software developer focused on building
+            modern and user-friendly web applications.
+          </h2>
 
-          <p className="w-full  text-lg font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
-            A Scotland-based full-stack developer focused on modern JavaScript
-            development. I specialise in creating fast, responsive, and
-            user-friendly applications.
-          </p>
-        </div>
-
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1" className="my-2 border-none">
-            <AccordionTrigger className="text-lg font-bold hover:no-underline text-gray-500 dark:text-gray-400 dark:hover:text-white/90 hover:text-black/80 transition-colors">
+        <Accordion type="single" collapsible className="mb-4">
+          <AccordionItem value="item-1" className=" border-none">
+            <AccordionTrigger className="text-lg font-bold text-gray-500 transition-colors hover:text-gray-600 hover:no-underline dark:text-gray-400 dark:hover:text-gray-300">
               Read more
             </AccordionTrigger>
             <AccordionContent>
@@ -59,7 +57,7 @@ const Hero = () => {
           </AccordionItem>
         </Accordion>
 
-        <div className="flex space-x-2 pt-1">
+        <div className="flex space-x-2 pt-2">
           {socialLinks.map((link, idx) => (
             <Link
               key={idx}
@@ -71,6 +69,9 @@ const Hero = () => {
             </Link>
           ))}
         </div>
+   
+
+
       </article>
     </section>
   );
