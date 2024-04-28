@@ -41,7 +41,7 @@ const Hero = () => {
             <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
           </Heading>
 
-          <p className="w-full text-xl font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
+          <p className="w-full  text-lg font-bold tracking-[0.015rem] text-gray-500 dark:text-gray-400">
             A Scotland-based full-stack developer focused on modern JavaScript
             development. I specialise in creating fast, responsive, and
             user-friendly applications.

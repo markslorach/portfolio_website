@@ -36,7 +36,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
     <section>
       <BackToButton href="/blog" text="Back to blogs" />
 
-      <section className="flex flex-col space-y-8 rounded-lg border border-gray-300 p-6 dark:border-gray-600">
+      <section className="flex flex-col space-y-8 rounded-lg border mb-12 border-gray-300 p-5 dark:border-gray-600">
         <Heading>{post.title}</Heading>
 
         <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
@@ -74,7 +74,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         </figure>
       )}
 
-      <article className="prose mt-24 min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400 dark:prose-li:marker:text-[#8cbdf8]">
+      <article className="prose min-w-full text-wrap dark:prose-invert prose-li:marker:text-blue-400 dark:prose-li:marker:text-[#8cbdf8]">
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
 

@@ -15,7 +15,7 @@ const BlogPage = async () => {
 
   return (
     <section>
-     <Heading className="mb-20">
+     <Heading className="mb-12">
         Blog<span className="dark:text-[#8cbdf8] text-blue-400">.</span>
       </Heading>
 
