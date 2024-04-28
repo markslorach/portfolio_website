@@ -25,7 +25,7 @@ export default async function Home() {
             Recent <span className="dark:text-[#8cbdf8] text-blue-400">Projects</span>
           </h2>
           <Link
-            className="hidden flex-col justify-end font-medium underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:inline-flex"
+            className="hidden flex-col justify-end font-normal underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:inline-flex"
             href="/projects#top"
           >
             View all projects
@@ -42,7 +42,7 @@ export default async function Home() {
 
         <div className="mb-20">
           <Link
-            className="flex justify-end font-medium underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:hidden"
+            className="flex justify-end font-normal underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:hidden"
             href="/projects#top"
           >
             View all projects

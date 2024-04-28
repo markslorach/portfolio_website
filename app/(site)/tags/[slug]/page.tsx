@@ -22,10 +22,11 @@ const TagPage = async ({ params: { slug } }: Props) => {
   return (
     <section>
       <BackToButton href="/blog" text="Back to blogs" />
-      <div className="mb-20 flex flex-col space-y-8">
-     
-      <Heading><span className="dark:text-[#8cbdf8] text-blue-400">#</span>{slug}</Heading>
-      </div>
+
+      <Heading className="mb-12">
+        <span className="text-blue-400 dark:text-[#8cbdf8]">#</span>
+        {slug}
+      </Heading>
 
       {blogs.length > 0 ? (
         <BlogList blogs={blogs} />
