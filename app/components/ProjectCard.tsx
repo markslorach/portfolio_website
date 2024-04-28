@@ -13,7 +13,7 @@ const ProjectCard = ({ project, idx }: { project: Project; idx: number }) => {
       key={idx}
       href={project.githubUrl}
       target="_blank"
-      className={`flex flex-col justify-end rounded-lg border border-gray-300 p-3 transition-transform duration-300 ease-linear hover:-translate-y-0.5 dark:border-gray-600 ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
+      className={`flex flex-col justify-end rounded-lg border border-gray-400 p-3 transition-transform duration-300 ease-linear hover:-translate-y-0.5 dark:border-gray-500 ${idx === 0 || idx === 3 ? "sm:col-span-6" : idx === 1 || idx === 2 ? "sm:col-span-5" : ""}`}
     >
       <article className="space-y-3">
         <h3 className="flex items-center font-semibold leading-none text-gray-700 dark:text-gray-300">

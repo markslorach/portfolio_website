@@ -36,17 +36,17 @@ const Hero = () => {
 
       <article className="flex flex-col">
 
-          <Heading className="mb-4">
+          <Heading className="mb-6">
             Hello! I&apos;m{" "}
             <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
           </Heading>
-          <h2 className="w-full mb-4 text-pretty text-2xl font-bold tracking-[0.015rem] text-gray-600 dark:text-gray-300">
+          <h2 className="w-full mb-6 text-pretty text-2xl font-bold tracking-[0.015rem] text-gray-600 dark:text-gray-300">
             {" "}
             A Scotland-based full-stack software developer focused on building
             modern and user-friendly web applications.
           </h2>
 
-        <Accordion type="single" collapsible className="mb-4">
+        <Accordion type="single" collapsible className="mb-6">
           <AccordionItem value="item-1" className=" border-none">
             <AccordionTrigger className="text-lg font-bold text-gray-500 transition-colors hover:text-gray-600 hover:no-underline dark:text-gray-400 dark:hover:text-gray-300">
               Read more
