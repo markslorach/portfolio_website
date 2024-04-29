@@ -27,7 +27,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           {formattedDate}
         </small>
       </div>
-      <p className="leading-1 line-clamp-1 text-gray-500 dark:text-gray-400 text-xs tracking-wide leading-relaxed">
+      <p className="leading-1 line-clamp-1 text-gray-600 dark:text-gray-400 text-xs tracking-wide leading-relaxed">
         {post.description}
       </p>
     </Link>

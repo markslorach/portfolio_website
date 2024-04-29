@@ -19,7 +19,7 @@ const ProjectCard = ({ project, idx }: { project: Project; idx: number }) => {
         <h3 className="flex items-center font-semibold leading-none text-gray-700 dark:text-gray-300">
           {project.title} <ExternalLink className="ml-2 h-3.5 w-3.5" />
         </h3>
-        <p className="line-clamp-2 text-gray-500 dark:text-gray-400 text-xs tracking-wide leading-relaxed">
+        <p className="line-clamp-2 text-gray-00 dark:text-gray-400 text-xs tracking-wide leading-relaxed">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2">
@@ -27,7 +27,7 @@ const ProjectCard = ({ project, idx }: { project: Project; idx: number }) => {
             <Badge
               key={tag._id}
               variant="outline"
-              className="border-gray-300 text-gray-500 dark:border-gray-700 dark:text-gray-400 tracking-wide"
+              className="border-gray-400 text-gray-500 dark:border-gray-500 dark:text-gray-400 tracking-wide"
             >
               <small>{tag.name}</small>
             </Badge>

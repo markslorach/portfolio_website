@@ -48,7 +48,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
           <div className="flex items-center space-x-2">
             {post.tags.map((tag) => (
               <Badge
-                className="border-gray-300 text-gray-500 dark:border-gray-700 dark:text-gray-400 transition-colors hover:dark:text-white/90 hover:text-black/80"
+                className="border-gray-400 text-gray-500 dark:border-gray-500 dark:text-gray-400 transition-colors hover:dark:text-white/90 hover:text-black/80"
                 variant="outline"
                 key={tag._id}
               >
@@ -74,7 +74,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         </figure>
       )}
 
-      <article className="prose min-w-full text-wrap dark:prose-invert dark:text-white/90 text-black/80 prose-li:marker:text-blue-400 dark:prose-li:marker:text-[#8cbdf8] tracking-wide">
+      <article className="prose min-w-full text-pretty dark:prose-invert dark:text-white/90 text-black/80 prose-li:marker:text-blue-400 dark:prose-li:marker:text-[#8cbdf8] tracking-wide">
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
 
