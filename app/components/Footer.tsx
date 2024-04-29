@@ -31,7 +31,7 @@ const Footer = () => {
         ))}
       </div>
       <div>
-        <small className="text-gray-400 dark:text-gray-500">
+        <small className="text-gray-400 dark:text-gray-500 tracking-wide">
           Built using{" "}
           <Link
             href="https://nextjs.org/"
