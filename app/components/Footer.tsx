@@ -55,8 +55,8 @@ const Footer = () => {
             className="font-bold"
           >
             TypeScript
-          </Link>
-          , and{" "}
+          </Link>{" "}
+          and{" "}
           <Link
             href="https://www.sanity.io/"
             target="_blank"

@@ -23,13 +23,13 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           <ArrowUpRightIcon className="ml-2 h-3.5 w-3.5" />
         </div>
 
-        <small className="mb-3.5 hidden text-xs leading-none text-gray-500 dark:text-gray-400 sm:block">
+        <small className="mb-3.5 hidden text-xs leading-none text-gray-500 dark:text-gray-400 sm:block tracking-wide">
           {formattedDate}
         </small>
       </div>
-      <small className="leading-1 line-clamp-1 text-gray-500 dark:text-gray-400">
+      <p className="leading-1 line-clamp-1 text-gray-500 dark:text-gray-400 text-xs tracking-wide leading-relaxed">
         {post.description}
-      </small>
+      </p>
     </Link>
   );
 };

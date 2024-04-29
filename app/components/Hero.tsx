@@ -40,7 +40,7 @@ const Hero = () => {
             Hello! I&apos;m{" "}
             <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
           </Heading>
-          <h2 className="w-full mb-5 text-pretty text-2xl font-bold tracking-[0.015rem] text-gray-600 dark:text-gray-300">
+          <h2 className="w-full mb-5 text-pretty text-xl font-semibold tracking-wide leading-normal text-gray-600 dark:text-gray-300">
             {" "}
             A Scotland-based full-stack software developer focused on building
             modern and user-friendly web applications.
@@ -48,7 +48,7 @@ const Hero = () => {
 
         <Accordion type="single" collapsible className="mb-5">
           <AccordionItem value="item-1" className=" border-none">
-            <AccordionTrigger className="text-lg font-bold text-gray-500 transition-colors hover:text-gray-600 hover:no-underline dark:text-gray-400 dark:hover:text-gray-300">
+            <AccordionTrigger className="text-base font-medium text-gray-500 transition-colors hover:text-gray-600 hover:no-underline dark:text-gray-400 dark:hover:text-gray-300">
               Read more
             </AccordionTrigger>
             <AccordionContent>

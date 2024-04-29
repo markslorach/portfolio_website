@@ -14,7 +14,7 @@ import toast from "react-hot-toast";
 const ContactForm = () => {
   return (
     <form
-      className="space-y-4 rounded-lg border border-gray-300 p-5 dark:border-gray-600"
+      className="space-y-4 rounded-lg border border-gray-400 p-5 dark:border-gray-500"
       action={async (formData) => {
         await sendEmail(formData);
         toast.success("Message sent successfully!");
@@ -26,7 +26,7 @@ const ContactForm = () => {
         <div className="space-y-1">
           <Label className="font-semibold">Name</Label>
           <Input
-            className="border-gray-300 bg-transparent dark:border-gray-600 dark:bg-transparent"
+            className="border-gray-400 bg-transparent dark:border-gray-500 dark:bg-transparent"
             name="name"
             required
             placeholder="Name"
@@ -35,7 +35,7 @@ const ContactForm = () => {
         <div className="space-y-1">
           <Label className="font-semibold">Email</Label>
           <Input
-            className="border-gray-300 bg-transparent dark:border-gray-600 dark:bg-transparent"
+            className="border-gray-400 bg-transparent dark:border-gray-500 dark:bg-transparent"
             name="email"
             required
             placeholder="Email"
@@ -46,7 +46,7 @@ const ContactForm = () => {
       <div className="space-y-1">
         <Label className="font-semibold">Message</Label>
         <Textarea
-          className="max-h-96 min-h-44 border-gray-300 bg-transparent dark:border-gray-600 dark:bg-transparent"
+          className="max-h-96 min-h-44 border-gray-400 bg-transparent dark:border-gray-500 dark:bg-transparent"
           name="message"
           required
           placeholder="Message"

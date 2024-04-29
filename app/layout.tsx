@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Lato } from "next/font/google";
+import { Raleway } from "next/font/google";
 
 import "./globals.css";
 import Providers from "./providers";
 
-// const inter = Inter({ subsets: ["latin"] });
-
-const lato = Lato({
-  weight: ["100", "300", "400", "700", "900"],
+export const raleway = Raleway({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -23,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={lato.className}>
+      <body className={raleway.className}>
         <Providers>{children}</Providers>
       </body>
     </html>

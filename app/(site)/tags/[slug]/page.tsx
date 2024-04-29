@@ -21,7 +21,7 @@ const TagPage = async ({ params: { slug } }: Props) => {
 
   return (
     <section>
-      <BackToButton href="/blog" text="Back to blogs" />
+      <BackToButton href="/blog" text="Back to posts" />
 
       <Heading className="mb-12">
         <span className="text-blue-400 dark:text-[#8cbdf8]">#</span>
