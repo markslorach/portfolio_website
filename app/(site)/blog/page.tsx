@@ -22,7 +22,7 @@ const BlogPage = async () => {
       {blogs.length > 0 ? (
         <BlogList blogs={blogs.slice(0, 4)} />
       ) : (
-        <p className="text-2xl font-bold leading-none text-black/50">
+        <p className="text-xl font-bold tracking-wide leading-none text-gray-500 dark:text-gray-400">
           Well this is embarrassing...
         </p>
       )}
