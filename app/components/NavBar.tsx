@@ -27,9 +27,9 @@ const NavBar = () => {
     >
       <div className="flex items-center space-x-12">
         <Link href="/">
-          <h1 className="text-xl font-bold tracking-wide text-blue-400 dark:text-[#8cbdf8]">
+          <h1 className="text-xl font-semibold tracking-wide text-blue-400 dark:text-[#8cbdf8]">
             mark
-            <span className="text-gray-600 dark:text-white/90">slorach</span>.
+            <span className="text-black/80 dark:text-white/90">slorach</span>.
           </h1>
         </Link>
 

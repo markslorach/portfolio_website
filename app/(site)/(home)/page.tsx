@@ -21,11 +21,12 @@ export default async function Home() {
 
       <section>
         <div className="mb-8 flex justify-between">
-          <h2 className="text-2xl font-bold leading-none">
-            Recent <span className="dark:text-[#8cbdf8] text-blue-400">Projects</span>
+          <h2 className="text-2xl font-semibold leading-none">
+            Recent{" "}
+            <span className="text-blue-400 dark:text-[#8cbdf8]">Projects</span>
           </h2>
           <Link
-            className="hidden flex-col tracking-wide justify-end font-normal underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:inline-flex"
+            className="hidden flex-col justify-end font-normal tracking-wide underline decoration-blue-400 decoration-1 underline-offset-[2.3px] dark:decoration-[#8cbdf8] sm:inline-flex"
             href="/projects#top"
           >
             View all projects
@@ -35,14 +36,14 @@ export default async function Home() {
         {projects.length > 0 ? (
           <ProjectList project={projects.slice(0, 4)} />
         ) : (
-          <p className="text-xl font-bold tracking-wide leading-none text-gray-500 dark:text-gray-400">
+          <p className="text-xl font-normal leading-none tracking-wide text-gray-500 dark:text-gray-400">
             Well this is embarrassing...
           </p>
         )}
 
         <div className="mb-20">
           <Link
-            className="flex justify-end font-normal tracking-wide underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:hidden"
+            className="flex justify-end font-normal tracking-wide underline decoration-blue-400 decoration-1 underline-offset-[2.3px] dark:decoration-[#8cbdf8] sm:hidden"
             href="/projects#top"
           >
             View all projects
@@ -52,11 +53,12 @@ export default async function Home() {
 
       <section>
         <div className="mb-8 flex justify-between">
-          <h2 className="text-2xl font-bold leading-none">
-            Latest <span className="dark:text-[#8cbdf8] text-blue-400">Posts</span>
+          <h2 className="text-2xl font-semibold leading-none">
+            Latest{" "}
+            <span className="text-blue-400 dark:text-[#8cbdf8]">Posts</span>
           </h2>
           <Link
-            className="hidden flex-col tracking-wide justify-end font-medium underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:inline-flex"
+            className="hidden flex-col justify-end font-normal tracking-wide underline decoration-blue-400 decoration-1 underline-offset-[2.3px] dark:decoration-[#8cbdf8] sm:inline-flex"
             href="/blog#top"
           >
             View all posts
@@ -66,13 +68,13 @@ export default async function Home() {
         {blogs.length > 0 ? (
           <BlogList blogs={blogs.slice(0, 4)} />
         ) : (
-          <p className="text-xl font-bold tracking-wide leading-none text-gray-500 dark:text-gray-400">
+          <p className="text-xl font-normal leading-none tracking-wide text-gray-500 dark:text-gray-400">
             Well this is embarrassing...
           </p>
         )}
         {blogs.length > 0 && (
           <Link
-            className="flex justify-end tracking-wide font-medium underline decoration-blue-400 dark:decoration-[#8cbdf8] decoration-1 underline-offset-[2.3px] sm:hidden"
+            className="flex justify-end font-normal tracking-wide underline decoration-blue-400 decoration-1 underline-offset-[2.3px] dark:decoration-[#8cbdf8] sm:hidden"
             href="/blog#top"
           >
             View all posts

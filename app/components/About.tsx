@@ -3,7 +3,7 @@ import Link from "next/link";
 const About = async () => {
   return (
     <section>
-      <article className="prose min-w-full text-pretty tracking-wide dark:prose-invert dark:text-white/90 text-black/80">
+      <article className="prose min-w-full font-light text-pretty tracking-wide dark:prose-invert dark:text-white/90 text-black/80">
         <p>
           In 2023, my passion for technology led me from a career as a
           videographer and drone operator into the world of software

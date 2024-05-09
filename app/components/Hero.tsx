@@ -35,11 +35,11 @@ const Hero = () => {
       </figure>
 
       <article className="flex flex-col">
-        <Heading className="mb-5 text-[46px] sm:text-5xl">
+        <Heading className="mb-5 text-5xl font-semibold">
           Hello! I&apos;m{" "}
           <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
         </Heading>
-        <h2 className="mb-5 w-full text-pretty text-xl font-semibold leading-normal tracking-wide text-gray-700 dark:text-gray-300">
+        <h2 className="mb-5 w-full text-pretty text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
           {" "}
           A Scotland-based full-stack software developer focused on building
           modern and user-friendly web applications.
@@ -47,7 +47,7 @@ const Hero = () => {
 
         <Accordion type="single" collapsible className="mb-5">
           <AccordionItem value="item-1" className=" border-none">
-            <AccordionTrigger className="text-base font-medium text-gray-500 transition-colors hover:text-gray-700 hover:no-underline dark:text-gray-400 dark:hover:text-gray-300">
+            <AccordionTrigger className="text-lg font-normal text-gray-500 transition-colors hover:text-gray-700 hover:no-underline dark:text-gray-400 dark:hover:text-gray-300">
               Read more
             </AccordionTrigger>
             <AccordionContent>
