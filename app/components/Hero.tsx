@@ -35,7 +35,7 @@ const Hero = () => {
       </figure>
 
       <article className="flex flex-col">
-        <Heading className="mb-5 text-5xl font-semibold">
+        <Heading className="mb-5 text-4xl leading-none sm:text-5xl font-semibold">
           Hello! I&apos;m{" "}
           <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
         </Heading>
