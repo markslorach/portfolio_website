@@ -23,7 +23,7 @@ const ContactForm = () => {
       }}
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div className="space-y-1">
+        <div className="space-y-2">
           <Label className="font-semibold">Name</Label>
           <Input
             className="border-gray-400 bg-transparent dark:border-gray-500 dark:bg-transparent"
@@ -32,7 +32,7 @@ const ContactForm = () => {
             placeholder="Name"
           />
         </div>
-        <div className="space-y-1">
+        <div className="space-y-2">
           <Label className="font-semibold">Email</Label>
           <Input
             className="border-gray-400 bg-transparent dark:border-gray-500 dark:bg-transparent"
@@ -43,7 +43,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-      <div className="space-y-1">
+      <div className="space-y-2">
         <Label className="font-semibold">Message</Label>
         <Textarea
           className="max-h-96 min-h-44 border-gray-400 bg-transparent dark:border-gray-500 dark:bg-transparent"
