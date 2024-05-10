@@ -62,7 +62,7 @@ const Hero = () => {
               key={idx}
               href={link.href}
               target="_blank"
-              className="rounded-lg bg-slate-200/60 p-2 dark:bg-white/10"
+              className="rounded-md bg-slate-200/60 p-2 dark:bg-white/10"
             >
               <link.icon className="h-6 w-6" />
             </Link>

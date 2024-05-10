@@ -13,7 +13,7 @@ import { sendEmail } from "../actions/sendEmail";
 const ContactForm = () => {
   return (
     <form
-      className="space-y-4 rounded-lg border border-gray-400 p-5 dark:border-gray-500"
+      className="space-y-4 rounded-md border border-gray-400 p-5 dark:border-gray-500"
       action={async (formData) => {
         await sendEmail(formData);
         toast.success("Message sent successfully!");

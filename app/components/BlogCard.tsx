@@ -13,7 +13,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
   return (
     <Link
       href={`/blog/${post.slug.current}`}
-      className="rounded-lg border border-gray-400 p-3 transition-transform duration-300 ease-linear hover:-translate-y-0.5 dark:border-gray-500"
+      className="rounded-md border border-gray-400 p-3 transition-transform duration-300 ease-linear hover:-translate-y-0.5 dark:border-gray-500"
     >
       <div className="flex items-center justify-between">
         <div className="mb-2 flex items-center">
