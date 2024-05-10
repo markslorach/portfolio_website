@@ -15,8 +15,12 @@ import Heading from "./Heading";
 import About from "./About";
 
 export const socialLinks = [
-  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/markslorach/" },
-  { icon: FaGithub, href: "https://github.com/markslorach" },
+  {
+    icon: FaLinkedinIn,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/markslorach/",
+  },
+  { icon: FaGithub, label: "GitHub", href: "https://github.com/markslorach" },
 ];
 
 const Hero = () => {
@@ -35,11 +39,11 @@ const Hero = () => {
       </figure>
 
       <article className="flex flex-col">
-        <Heading className="mb-5 text-4xl leading-none sm:text-5xl font-semibold">
+        <Heading className="mb-5 text-4xl font-semibold leading-none sm:text-5xl">
           Hello! I&apos;m{" "}
           <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
         </Heading>
-        <h2 className="mb-5 pr-5 w-full text-pretty text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
+        <h2 className="mb-5 w-full text-pretty pr-5 text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
           {" "}
           A Scotland-based full-stack software developer focused on building
           modern and user-friendly web applications.
@@ -61,8 +65,9 @@ const Hero = () => {
             <Link
               key={idx}
               href={link.href}
+              aria-label={link.label}
               target="_blank"
-              className="rounded-md bg-slate-200/60 hover:bg-slate-200/90 p-2 transition-colors dark:bg-white/10 dark:hover:bg-white/15"
+              className="rounded-md bg-slate-200/60 p-2 transition-colors hover:bg-slate-200/90 dark:bg-white/10 dark:hover:bg-white/15"
             >
               <link.icon className="h-6 w-6" />
             </Link>

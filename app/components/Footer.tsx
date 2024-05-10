@@ -23,7 +23,12 @@ const Footer = () => {
 
       <div className="flex justify-center space-x-4">
         {socialLinks.map((link, idx) => (
-          <Link key={idx} href={link.href} target="_blank">
+          <Link
+            key={idx}
+            href={link.href}
+            aria-label={link.label}
+            target="_blank"
+          >
             {
               <link.icon className="h-6 w-6 text-gray-500 transition-colors hover:text-blue-400 dark:text-gray-400 dark:hover:text-[#8cbdf8]" />
             }
@@ -31,7 +36,7 @@ const Footer = () => {
         ))}
       </div>
       <div>
-        <small className="text-gray-400 dark:text-gray-500 tracking-wide">
+        <small className="tracking-wide text-gray-400 dark:text-gray-500">
           Built using{" "}
           <Link
             href="https://nextjs.org/"
