@@ -14,7 +14,13 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
 import Heading from "./Heading";
 import About from "./About";
 
-export const socialLinks = [
+interface SocialLink {
+  icon: any;
+  label: string;
+  href: string;
+}
+
+export const socialLinks: SocialLink[] = [
   {
     icon: FaLinkedinIn,
     label: "LinkedIn",
@@ -43,7 +49,7 @@ const Hero = () => {
           Hello! I&apos;m{" "}
           <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
         </Heading>
-        <h2 className="mb-5 w-full text-pretty pr-5 text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
+        <h2 className="mb-5 w-full text-pretty pr-5 md:pr-0 text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
           {" "}
           A Scotland-based full-stack software developer focused on building
           modern and user-friendly web applications.
