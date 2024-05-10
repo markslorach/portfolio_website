@@ -39,7 +39,7 @@ const Hero = () => {
           Hello! I&apos;m{" "}
           <span className="text-blue-400 dark:text-[#8cbdf8]">Mark</span>.
         </Heading>
-        <h2 className="mb-5 w-full text-pretty text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
+        <h2 className="mb-5 pr-5 w-full text-pretty text-xl font-light leading-normal tracking-wide text-gray-700 dark:text-gray-300">
           {" "}
           A Scotland-based full-stack software developer focused on building
           modern and user-friendly web applications.
