@@ -7,6 +7,7 @@ Source code for my [personal website and blog.](https://www.markslorach.com/)
 - Tailwind
 - TypeScript
 - Sanity.io
+- Shadcn/ui
 
 ### Say hello
 ---
