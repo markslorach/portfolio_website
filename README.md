@@ -9,6 +9,12 @@ Source code for my [personal website and blog.](https://www.markslorach.com/)
 - Sanity.io
 - Shadcn/ui
 
+### Working on
+- Updated project cards with images
+- Project case studies
+- Blog article header image
+- Featured post and related posts
+
 ### Say hello
 Feel free to get in touch at hello@markslorach.com
 
