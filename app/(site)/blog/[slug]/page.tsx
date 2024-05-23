@@ -34,13 +34,13 @@ const BlogPage = async ({ params: { slug } }: Props) => {
 
   return (
     <section>
-      <BackToButton href="/blog" text="Back to posts" />
+      {/* <BackToButton href="/blog" text="Back to posts" /> */}
 
       <section className="mb-20 flex flex-col space-y-8 rounded-lg tracking-wide">
         <Heading className="text-5xl">{post.title}</Heading>
 
         <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
-          <span className="flex items-center leading-none text-gray-500 dark:text-gray-400">
+          <span className="flex items-center text-sm leading-none text-gray-500 dark:text-gray-400">
             <CalendarDaysIcon className="mb-0.5 mr-1 h-5 w-5" />
             {formatDate(post.createdAt)}
           </span>
