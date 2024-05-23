@@ -17,7 +17,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
     >
       <div className="flex items-center justify-between">
         <div className="mb-2 flex items-center">
-          <h2 className="leading-1 line-clamp-1 text-gray-600 dark:text-gray-300 text-xl font-medium">
+          <h2 className="leading-1 line-clamp-1 text-gray-700 dark:text-gray-300 text-xl font-medium">
             {post.title}
           </h2>
           <ArrowUpRightIcon className="ml-2 h-3.5 w-3.5" />
@@ -27,7 +27,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           {formattedDate}
         </span>
       </div>
-      <p className="leading-1 line-clamp-1 text-gray-600 dark:text-gray-400 text-sm tracking-wide leading-relaxed">
+      <p className="leading-1 line-clamp-1 text-gray-500 dark:text-gray-400 text-sm tracking-wide leading-relaxed">
         {post.description}
       </p>
     </Link>

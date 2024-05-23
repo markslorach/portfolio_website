@@ -36,19 +36,19 @@ const BlogPage = async ({ params: { slug } }: Props) => {
     <section>
       <BackToButton href="/blog" text="Back to posts" />
 
-      <section className="flex flex-col space-y-8 rounded-lg border mb-12 border-gray-400 p-5 dark:border-gray-500 tracking-wide">
-        <Heading>{post.title}</Heading>
+      <section className="mb-20 flex flex-col space-y-8 rounded-lg tracking-wide">
+        <Heading className="text-5xl">{post.title}</Heading>
 
         <div className="flex flex-wrap items-center justify-between gap-4 sm:space-x-4">
-          <small className="flex items-center font-medium leading-none text-gray-500 dark:text-gray-400">
+          <span className="flex items-center leading-none text-gray-500 dark:text-gray-400">
             <CalendarDaysIcon className="mb-0.5 mr-1 h-5 w-5" />
             {formatDate(post.createdAt)}
-          </small>
+          </span>
 
           <div className="flex items-center space-x-2">
             {post.tags.map((tag) => (
               <Badge
-                className="border-gray-400 text-gray-500 dark:border-gray-500 dark:text-gray-400 transition-colors hover:dark:text-white/90 hover:text-black/80"
+                className="border-gray-400 text-gray-500 transition-colors hover:text-black/80 dark:border-gray-500 dark:text-gray-400 hover:dark:text-white/90"
                 variant="outline"
                 key={tag._id}
               >
@@ -74,7 +74,7 @@ const BlogPage = async ({ params: { slug } }: Props) => {
         </figure>
       )}
 
-      <article className="prose min-w-full text-pretty dark:prose-invert dark:text-white/90 text-black/80 prose-li:marker:text-blue-400 dark:prose-li:marker:text-[#8cbdf8] tracking-wide">
+      <article className="prose min-w-full text-pretty tracking-wide text-black/80 dark:prose-invert prose-li:marker:text-blue-400 dark:text-white/90 dark:prose-li:marker:text-[#8cbdf8]">
         <PortableText value={post.content} components={PortableTextComponent} />
       </article>
 
