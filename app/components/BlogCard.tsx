@@ -13,21 +13,21 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
   return (
     <Link
       href={`/blog/${post.slug.current}`}
-      className="rounded-md border border-gray-400 p-3 transition-transform duration-300 ease-linear hover:-translate-y-0.5 dark:border-gray-500"
+      className="dark:border-gray-500 group"
     >
       <div className="flex items-center justify-between">
         <div className="mb-2 flex items-center">
-          <h2 className="leading-1 line-clamp-1 font-bold text-gray-600 dark:text-gray-300">
+          <h2 className="leading-1 line-clamp-1 text-gray-600 dark:text-gray-300 text-xl font-medium">
             {post.title}
           </h2>
           <ArrowUpRightIcon className="ml-2 h-3.5 w-3.5" />
         </div>
 
-        <small className="mb-3.5 hidden text-xs leading-none text-gray-500 dark:text-gray-400 sm:block tracking-wide">
+        <span className="mb-3.5 hidden text-sm leading-none text-gray-500 dark:text-gray-400 sm:block tracking-wide">
           {formattedDate}
-        </small>
+        </span>
       </div>
-      <p className="leading-1 line-clamp-1 text-gray-600 dark:text-gray-400 text-xs tracking-wide leading-relaxed">
+      <p className="leading-1 line-clamp-1 text-gray-600 dark:text-gray-400 text-sm tracking-wide leading-relaxed">
         {post.description}
       </p>
     </Link>
