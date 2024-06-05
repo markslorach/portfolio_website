@@ -11,7 +11,7 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: "Mark Slorach - Software Developer",
-  description: "A Scotland-based full-stack developer focused on modern JavaScript development. I specialise in creating fast, responsive, and user-friendly applications.",
+  description: "A Scotland-based full-stack software developer focused on building modern and user-friendly web applications.",
 };
 
 export default function RootLayout({
